@@ -3034,7 +3034,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         validation_error_resource_class?: scalar|null, // The class used to represent validation errors in the OpenAPI documentation. // Default: null
  *     },
  *     maker?: bool|array{
- *         enabled?: bool, // Default: false
+ *         enabled?: bool, // Default: true
  *     },
  *     exception_to_status?: array<string, int>,
  *     formats?: array<string, array{ // Default: {"jsonld":{"mime_types":["application/ld+json"]}}
@@ -3445,6 +3445,11 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  * @psalm-type SyliusMollieConfig = array{
  *     migrations?: array<string, list<scalar|null>>,
  * }
+ * @psalm-type MakerConfig = array{
+ *     root_namespace?: scalar|null, // Default: "App"
+ *     generate_final_classes?: bool, // Default: true
+ *     generate_final_entities?: bool, // Default: false
+ * }
  * @psalm-type WhiteOctoberPagerfantaConfig = array{ // Deprecated: The "white_october_pagerfanta" configuration node is deprecated, migrate your configuration to the "babdev_pagerfanta" configuration node.
  *     exceptions_strategy?: array{
  *         out_of_range_page?: scalar|null, // Default: "to_http_not_found"
@@ -3577,6 +3582,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         sylius_paypal?: SyliusPaypalConfig,
  *         bazinga_js_translation?: BazingaJsTranslationConfig,
  *         sylius_mollie?: SyliusMollieConfig,
+ *         maker?: MakerConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
