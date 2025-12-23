@@ -1,0 +1,15 @@
+{
+    "name": "anja-tomic/moravka-pig-theme",
+    "authors": [
+        {
+            "name": "Anja Tomic",
+            "email": "tomicanja001@gmail.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "extra": {
+        "sylius-theme": {
+            "title": "MoravkaPig Theme"
+        }
+    }
+}
