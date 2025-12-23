@@ -1,0 +1,6 @@
+sylius_twig_hooks:
+    hooks:
+        sylius_shop.homepage.index:
+            latest_deals:
+                component: 'Blank'
+                priority: 0
