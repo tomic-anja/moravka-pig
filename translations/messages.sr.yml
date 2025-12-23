@@ -913,7 +913,7 @@ sylius:
         new_tax_rate: Novi porez
         new_taxon: Nova kategorija
         new_zone: Nova zona
-        newest_products: Najnoviji proizvodi
+        newest_products: Proizvodi
         next: Sledeća
         no_default_billing_address: Nema podrazumevane adrese za plaćanje
         no_default_shipping_address: Nema podrazumevane adrese za slanje
@@ -1389,7 +1389,7 @@ sylius:
         jump_to_page: Idi na stranicu
         label: Oznaka
         last_updated: Poslednje ažurirano
-        latest_products: Najnoviji proizvodi
+        latest_products: Proizvodi
         less_than: Manje od
         license: Licenca
         links: Linkovi

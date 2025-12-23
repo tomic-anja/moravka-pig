@@ -1,5 +1,9 @@
 sylius_twig_hooks:
     hooks:
+        sylius_shop.base.header:
+            latest_deals:
+                component: 'NavigationMenu'
+                priority: 150
         sylius_shop.homepage.index:
             latest_deals:
                 component: 'Blank'
