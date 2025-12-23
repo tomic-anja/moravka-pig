@@ -1,0 +1,229 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+sylius:
+    order_item:
+        product_variant:
+            not_blank: Varijanta proizvoda nije navedena.
+        quantity:
+            min: Količina stavke porudžbine ne može biti manja od 1.
+            not_blank: Količina nije navedena.
+    attribute:
+        code:
+            not_blank: Molimo unesite kod atributa.
+        name:
+            not_blank: Molimo unesite ime atributa.
+    attribute.name:
+        not_bank: Molimo Vas da unesete ime osobine.
+        min_length: Ime osobine mora biti minimum 1 karakter.
+        name.max_length: Ime osobine ne sme biti duže od 1 karaktera.
+    attribute.presentation:
+        not_blank: Molimo Vas unesite prikaz osobine.
+        min_length: Prikaz osobine mora biti dug najmanje 1 karakter.
+        max_length: Prikaz osobine ne sme biti duži od 1 karaktera.
+    attribute_value:
+        attribute:
+            not_blank: Molimo Vas izaberite osobinu.
+        value:
+            not_blank: Molimo Vas unesite vrednost osobine.
+    association_type:
+        code:
+            not_blank: Molimo unesite kod tipa asocijacije.
+        name:
+            not_blank: Molimo unesite naziv tipa asocijacije.
+    address.city:
+        not_blank: Molimo Vas unesite grad.
+    address.country:
+        not_blank: Molimo Vas izaberite zemlju.
+        disabled: Izabrana zemlja nije dostupna. Odaberite drugu zemlju.
+    address.first_name:
+        not_blank: Molimo Vas unesite ime.
+    address.last_name:
+        not_blank: Molim Vas unesite prezime.
+    address.postcode:
+        not_blank: Molimo Vas unesite poštanski broj.
+    address.province:
+        valid: Molimo izaberite ispravnu regiju.
+    address.street:
+        not_blank: Molimo unesite naziv ulice.
+    address:
+        not_shippable: Ova adresa nije ispravno odredište za isporuku.
+    country.code:
+        not_blank: Molimo unesite ISO kod države.
+    customer:
+        email:
+            registered: Ovaj email je već registrovan. Molimo prijavite se ili koristite opciju „Zaboravljena lozinka“.
+            not_blank: Molimo unesite vaš email.
+            invalid: Uneti e-mail nije validan.
+        first_name:
+            not_blank: Molimo unesite vaše ime.
+        last_name:
+            not_blank: Molimo unesite vaše prezime.
+    customer_group:
+        code:
+            not_blank: Molimo unesite kod grupe kupaca.
+        name:
+            not_blank: Molimo unesite naziv grupe kupaca.
+    contact:
+        message:
+            not_blank: Molimo unesite vašu poruku.
+        email:
+            not_blank: Molimo unesite vašu email adresu.
+    channel:
+        code:
+            not_blank: Molimo unesite kod kanala.
+        name:
+            not_blank: Molimo unesite naziv kanala.
+    currency:
+        code:
+            not_blank: Molimo izaberite kod valute.
+    catalog_promotion:
+        code:
+            not_blank: Molimo unesite kod promocije u katalogu.
+        name:
+            not_blank: Molimo unesite naziv promocije u katalogu.
+    catalog_promotion_scope:
+        for_products:
+            not_empty: Dostavljena konfiguracija sadrži greške. Molimo dodajte najmanje 1 proizvod.
+        for_taxons:
+            not_empty: Dostavljena konfiguracija sadrži greške. Molimo dodajte najmanje 1 kategoriju
+        for_variants:
+            not_empty: Molimo dodajte najmanje 1 varijantu.
+    catalog_promotion_action:
+        fixed_discount:
+            not_valid: Dostavljena konfiguracija sadrži greške. Molimo unesite iznos fiksnog popusta koji je broj veći od 0.
+        percentage_discount:
+            not_number_or_empty: Iznos procentualnog popusta mora biti broj i ne sme biti prazan.
+    cart_promotions:
+        coupon_based_not_allowed: Promocije zasnovane na kuponima nisu dozvoljene u korpi.
+        not_valid: Molimo unesite ispravnu promociju.
+        not_blank: Molimo unesite kod promocije.
+        not_found: Promocija nije pronađena.
+        not_available: Promocija nije dostupna.
+        already_used: Promocija je već iskorišćena.
+        coupon_based: Promocija je zasnovana na kuponu.
+        not_eligible: Niste kvalifikovani za ovu promociju.
+
+    channel_pricing:
+        price:
+            not_blank: Molimo unesite cenu.
+            min: Cena mora biti veća ili jednaka od 0.
+            max: Cena ne sme biti veća od 1000000.
+            not_valid: Molimo unesite ispravnu cenu.
+            currency: Molimo izaberite valutu.
+    taxon:
+        name:
+            not_blank: Molimo unesite naziv kategorije.
+        slug:
+            not_blank: Molimo unesite URL oznaku kategorije.
+        code:
+            not_blank: Molimo unesite kod kategorije.
+    province.name:
+        not_blank: Molimo unesite naziv regije.
+    province:
+        code:
+            not_blank: Molimo unesite kod regije.
+    promotion:
+        code:
+            not_blank: Molimo unesite kod promocije.
+        name:
+            not_blank: Molimo unesite naziv promocije.
+    payment_method:
+        code:
+            not_blank: Molimo unesite kod načina plaćanja.
+        name:
+            not_blank: Molimo unesite naziv načina plaćanja.
+    product:
+        code:
+            not_blank: Molimo unesite kod proizvoda.
+        name:
+            not_blank: Molimo unesite naziv proizvoda.
+        slug:
+            not_blank: Molimo unesite URL oznaka proizvoda.
+    product_variant:
+        code:
+            not_blank: Molimo unesite kod.
+        channel_pricing:
+            price:
+                not_defined: Morate definisati cenu.
+
+    review:
+        author:
+            already_exists: Ovaj email je već registrovan. Molimo prijavite se ili koristite opciju „Zaboravljena lozinka“.
+        rating:
+            not_blank: Morate označiti ocenu recenzije.
+        title:
+            not_blank: Naslov recenzije ne sme biti prazan.
+        comment:
+            not_blank: Komentar recenzije ne sme biti prazan.
+    exchange_rate:
+        different_source_target_currency: Valuta izvora i ciljana valuta moraju biti različite.
+        ratio:
+            not_blank: Molimo unesite kursnu stopu.
+    locale:
+        code:
+            not_blank: Molimo izaberite kod lokalizacije.
+    gateway_config:
+        gateway_name:
+            not_blank: Molimo unesite naziv platnog operatera.
+    shipping_method:
+        zone:
+            not_blank: Molimo izaberite zonu metode isporuke
+        code:
+            not_blank: Molimo unesite kod metode isporuke.
+        calculator:
+            not_blank: Molimo izaberite kalkulator metode isporuke.
+        name:
+            not_blank: Molimo unesite naziv metode isporuke.
+    shipping_category:
+        code:
+            not_blank: Molimo unesite kod kategorije isporuke.
+        name:
+            not_blank: Molimo unesite naziv kategorije isporuke.
+    tax_category:
+        code:
+            not_blank: Molimo unesite kod poreske kategorije.
+        name:
+            not_blank: Molimo unesite naziv poreske kategorije.
+    tax_rate:
+        zone:
+            not_blank: Molimo izaberite zonu poreza.
+        code:
+            not_blank: Molimo unesite kod poreske stope.
+        name:
+            not_blank: Molimo unesite naziv poreske stope.
+        category:
+            not_blank: Molimo izaberite poresku kategoriju.
+    user:
+        email:
+            not_blank: Molimo unesite vaš email.
+        username:
+            not_blank: Molimo unesite vaše ime.
+        plainPassword:
+            not_blank: Molimo unesite vašu lozinku.
+            wrong_current: Uneta lozinka se razlikuje od trenutne.
+            mismatch: Lozinke se ne podudaraju.
+        password: 
+            min: Lozinka mora biti minimum 4 karaktera dužine.
+    option:
+        code:
+            not_blank: Molimo unesite kod opcije.
+        name:
+            not_blank: Molimo unesite naziv opcije.
+    option_value:
+        code:
+            not_blank: Molimo unesite kod vrednosti opcije.
+        value:
+            not_blank: Molimo unesite vrednost opcije.
+    zone:
+        code:
+            not_blank: Molimo unesite kod zone.
+        name:
+            not_blank: Molimo unesite naziv oblasti.
+    zone.members:
+        min_count: Molimo dodajte bar {{ limit }} članova.
+        not_blank: Molimo unesite naziv oblasti.
+    zone_member:
+        cannot_be_the_same_as_zone: Član zone ne može biti identičan zoni.
+        code:
+            not_blank: Molimo izaberite člana zone.

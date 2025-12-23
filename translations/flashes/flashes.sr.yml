@@ -1,0 +1,50 @@
+# This file is part of the Sylius package.
+# (c) Sylius Sp. z o.o.
+
+Your email has been successfully verified.: "Vaš e-mail je uspešno verifikovan."
+The verification token is invalid.: "Verifikacioni token nije validan."
+If the email you have specified exists in our system, we have sent there an instruction on how to reset your password.: "Ako mejl koji ste uneli postoji u našem sistemu, poslali smo na njega instrukcije kako da resetujete lozinku."
+Your password has been reset successfully!: "Vaša lozinka je uspešno resetovana."
+sylius:
+    cart:
+        add_item: "Artikal je uspešno unet u korpu"
+        cannot_modify: "Porudžbina je već poslata za korpu koju ste pokušavali da izmenite."
+        not_recalculated: "Zbog nevažećih vrednosti u vašoj korpi, nije ponovo izračunato."
+        remove_item: "Stavka je uklonjena iz korpe"
+        save: "Korpa je uspešno ažurirana"
+    channel:
+        delete_error: "Kanal ne može biti obrisan. Potreban je bar jedan aktiviran (omogućen) kanal."
+    checkout:
+        complete_error: "Došlo je do neočekivane greške prilikom završetka porudžbine. Molimo vas, pokušajte ponovo da izvršite porudžbinu."
+    contact:
+        request_success: "Vaš zahtev za kontakt je uspešno poslat"
+        request_error: "Došlo je do problema prilikom slanja zahteva za kontakt. Molimo pokušajte ponovo kasnije."
+    customer:
+        add_address: "Adresa je uspešno dodata"
+        impersonate: "Uspešno ste se predstavili kao kupac %name%."
+        set_address_as_default: "Adresa je postavljena kao podrazumevana."
+        register: "Hvala što ste se registrovali, proverite svoj email da biste verifikovali svoj nalog."
+    order:
+        apply_state_machine_transition_error: "Došlo je do neočekivanog problema prilikom ažuriranja porudžbine. Molimo pokušajte ponovo da ažurirate porudžbinu."
+        promotion_integrity: "Vi više niste kvalifikovani za ovu promociju %promotionName%."
+        total_integrity: "Ukupna cena vaše porudžbine je promenjena, proverite informacije o porudžbini i ponovo ih potvrdite."
+        update_error: "Došlo je do neočekivanog problema prilikom ažuriranja porudžbine. Molimo pokušajte ponovo da ažurirate porudžbinu."
+    payment:
+        apply_state_machine_transition_error: "Došlo je do neočekivanog problema prilikom ažuriranja plaćanja. Molimo pokušajte ponovo da ažurirate plaćanje."
+    product:
+        in_use_by_promotion_rule: "Ne možete obrisati proizvod koji se koristi u pravilu promocije."
+        out_of_stock: "Na skladištu je samo %quantity% ovog proizvoda."
+    product_variant:
+        update_error: "Došlo je do neočekivanog problema prilikom ažuriranja varijante proizvoda. Molimo pokušajte ponovo da ažurirate varijantu proizvoda."
+    promotion:
+        update_rules: "Neka pravila promocija sa kodovima %codes% su ažurirana."
+    taxon:
+        in_use_by_promotion_rule: "Ne možete obrisati kategoriju koja se koristi u pravilu promocije."
+        menu_taxon_delete: "Ne možete obrisati kategoriju menija bilo kog kanala."
+
+    resource:
+        create: "Kupac je uspešno kreiran."
+        update: "Kupac je uspešno ažuriran."
+        delete: "Kupac je uspešno obrisan."
+    user:
+        verify_email_request: Email sa verifikacionim linkom je poslat na vašu email adresu.

@@ -1,0 +1,1766 @@
+app:
+    ui:
+        user_experiances: Iskustva kupaca
+        social_media: Socijalne mreže
+        faqs: Najčešće postavljena pitanja
+        faq: pitanje i odgovor
+        user_experiance: iskustvo kupca
+sylius:
+    review:
+        title:
+            not_blank: Naslov recenzije ne sme biti prazan.
+        comment:
+            not_blank: Komentar recenzije ne sme biti prazan.
+    gender:
+        unknown: Neodredjen
+        male: Muski
+        female: Zenski
+    customer:
+        register: Hvala vam što ste se registrovali, proverite svoju e-poštu da biste potvrdili svoj nalog.
+        email:
+            not_blank: Molimo unesite vašu email adresu.
+
+    form:
+        checkout:
+            addressing:
+                different_billing_address: Koristiti drugu adresu za isporuku?
+        user_reset_password:
+            new: Nova lozinka
+            confirmation: Potvrda
+        review:
+            rating: Ocena
+            title: Naslov
+            comment: Komentar
+        attribute:
+            type: Tip
+            translatable: Moguće prevesti
+            name: Ime
+        product_attribute:
+            position: Pozicija
+            name: Ime
+        image:
+            file: Izaberi sliku
+        tax_category:
+            name: Ime
+            description: Opis
+        tax_rate:
+            name: Ime
+            category: Kategorija poreske stope
+            amount: iznos
+            calculator: Kalkulator
+            included_in_price: Uključeno u cenu
+            start_date: Datum početka
+            end_date: Datum završetka
+        attribute_type_configuration:
+            select:
+                min: Minimalna vrednost
+                max: Maksimalna vrednost
+                multiple: Višestruki izbor
+                values: Vrednosti
+            text:
+                min: Minimalna dužina
+                max: Maksimalna dužina
+        gateway_config:
+            use_payum: Koristi Payum
+            type: Tip
+        payment_method:
+            channels: Kanali
+            name: Ime
+            description: Opis
+            enabled: Omogući
+            instructions: Upustvo
+        shipping_method:
+            position: Pozicija
+            zone: Zona
+            category: Kategorija poreske stope
+            match_none_category_requirement: Ni jedna jedinica ne mora da pripada kategoriji metode
+            match_any_category_requirement: Najmanje jedna jedinica mora pripadati kategoriji metode
+            match_all_category_requirement: Sve jedinice moraju da odgovaraju kategoriji metode
+            tax_category: Kategorija poreza
+            calculator: Kalkulator
+            select_calculator: Izaberi kalkulator
+            channels: Kanali
+            rules_help: Koristi pravila za određivanje da li se ova metoda isporuke može primeniti na porudžbinu. Ako postoji više pravila, sva moraju biti tačna da bi se metoda primenila.
+            name: Ime
+            description: Opis
+        shipping_method_rule:
+            total_weight_greater_than_or_equal: Ukupna težina veća ili jednaka
+            total_weight_less_than_or_equal: Ukupna težina manja ili jednaka
+            items_total_greater_than_or_equal: Ukupna cena stavki veća ili jednaka
+            items_total_less_than_or_equal: Ukupna cena stavki manja ili jednaka
+        shipping_calculator:
+            flat_rate_configuration:
+                label: Fiksna cena po pošiljci
+                amount: Količina
+            per_unit_rate_configuration:
+                label: Fiksna cena po jedinici
+        shipping_category:
+            name: Ime
+            description: Opis
+        locale:
+            name: Ime
+            select: Izaberite lokaciju
+            enabled: Omogući
+        exchange_rate:
+            ratio: Odnos
+            target_currency: Ciljna valuta
+            source_currency: Izvorna valuta
+        admin:
+            channel:
+                lowest_price_for_discounted_products_visible: Prikaži najnižu cenu proizvoda sa popustom pre trenutnog popusta?
+                period_for_which_the_lowest_price_is_calculated: Period za koji se izračunava najniža cena
+        currency:
+            code: Ime
+            select: Izaberi valutu
+        zone:
+            select: Izaberite
+            type: Tip
+            name: Ime
+            scope: Opseg
+            add_member: Dodaj člana
+            scopes:
+                shipping: Dostava
+                tax: Porez
+                all: Sve
+
+            types:
+                country: Država
+                province: Provincija
+                zone: Zona
+        channel:
+            color: Boja
+            enabled: Omogući
+            name: Ime
+            hostname: Naziv hosta
+            contact_email: Kontakt e-mail
+            contact_phone_number: Broj telefona
+            description: Opis
+            countries: Zemlje
+            shipping_address_in_checkout_required: Adresa je neophodna pri plaćanju
+            skipping_shipping_step_allowed: Preskoči korak dostave ako je dostupna samo jedna metoda isporuke?
+            skipping_payment_step_allowed: Preskoči korak plaćanja ako je dostupna samo jedna metoda plaćanja?
+            account_verification_required: Da li je potvrda naloga obavezna?
+            shop_billing_data: Podaci o naplati prodavnice
+            tax_zone_default: Podrazumevana poreska zona
+            tax_calculation_strategy: Strategija obračuna poreza
+            currencies: Valute
+            currency_base: Osnovna valuta
+            theme: Tema
+            menu_taxon: Meni kategorija
+            locales: Lokacije
+            locale_default: Jezičko podešavanje
+            billing_data:
+                company: Preduzeće
+                country: Zemlja
+                city: Grad
+                tax_id: PIB
+                street: Ulica
+                postcode: Poštanski broj
+        promotion:
+            name: Ime
+            description: Opis
+            channels: Kanali
+            usage_limit: Ograničenje korišćenja
+            starts_at: Datum početka
+            ends_at: Završava se
+            priority: Prioritet
+            coupon_based: Na osnovu kupona
+            exclusive: Ekskluzivno
+            applies_to_discounted: Važi za artikle u porudžbini koji su već na popustu
+            applies_to_discounted_details: Sa ovom opcijom, promocija korpe biće primenjena i na stavke porudžbine koje su već snižene putem kataloške promocije.
+            label: Oznaka
+        promotion_rule:
+            customer_group: Grupa kupaca
+            nth_order: Naredna porudžbina
+            shipping_country: Zemlja isporuke
+            has_at_least_one_from_taxons: Pripada bar jednoj od navedenih kategorija
+            total_price_of_items_from_taxon: Ukupna cena artikala iz izabrane kategorije
+            contains_product: Sadrži proizvod
+            item_total: Ukupna cena stavke
+            cart_quantity: Ukupan broj artikala u korpi
+        promotion_action:
+            order_fixed_discount: Fiksni popust na porudžbinu
+            item_fixed_discount: Fiksni popust na stavku
+            order_percentage_discount: Popust na porudžbinu
+            item_percentage_discount: Procenat popusta na stavku
+            shipping_percentage_discount: Procenat popusta na dostavu
+        option:
+            position: Pozicija
+            name: Ime
+        option_value:
+            add_value: Dodaj vrednost
+        customer_group:
+            name: Ime
+        catalog_promotion:
+            name: Ime
+            channels: Kanali
+            priority: Prioritet
+            start_date: Datum početka
+            end_date: Datum završetka
+            enabled: Omogući
+            label: Oznaka
+            description: Opis
+
+        address:
+            first_name: Ime
+            last_name: Prezime
+            company: Preduzeće
+            street: Ulica i broj
+            country: Zemlja
+            city: Grad
+            postcode: Poštanski broj
+            phone_number: Broj telefona
+            province: Provincija
+            zone: Zona
+        attribute_type:
+            text: Tekst
+            textarea: Polje za unos teksta
+            checkbox: Polje za potvrdu
+            integer: Ceo broj
+            float: Realan broj
+            percent: Procenat
+            datetime: Datum i vreme
+            date: Datum
+            select: Izbor
+        taxon:
+            parent: Roditelj
+            enabled: Omogući
+            name: Ime
+            description: Opis
+        product:
+            enabled: Omogući
+            channels: Kanali
+            name: Ime
+            variant_selection_method: Način prikaza varijanti proizvoda
+            product_not_active_in_channel: Proizvod nije dostupan u izabranom prodajnom kanalu
+            meta_keywords: Meta ključne reči
+            meta_description: Meta opis
+            short_description: Kratak opis
+            main_taxon: Glavna kategorija
+            taxons: Kategorije
+            description: Opis
+            options: Opcije
+        product_association_type:
+            name: Ime
+        province:
+            name: Ime
+            abbreviation: Skraćenica
+        variant:
+            width: Širina
+            height: Visina
+            depth: Dubina
+            weight: Težina
+            on_hand: Zalihe
+            tracked: Praćeno
+            tracked_help: Ako je ova opcija omogućena, Sylius će pratiti stanje zaliha i zaustaviće prodaju proizvoda kada zaliha dostigne 0.
+            shipping_required: Da li je potrebna dostava
+        product_variant:
+            name: Ime
+            tax_category: Poreska kategorija
+            shipping_category: Kategorija dostave
+        country:
+            select: Izaberite
+            name: Ime
+            enabled: Omogući
+            add_province: Dodaj provinciju
+            provinces: Provincije
+        customer:
+            first_name: Ime
+            group: Grupa
+            last_name: Prezime
+            email: Email
+            phone_number: Broj telefona
+            gender: Pol
+            birthday: Datum rođenja
+            billing_address: Adresa za naplatu
+            different_shipping_address: Koristiti drugu adresu za dostavu?
+            only_customer_registration: Kreirati nalog?
+            subscribed_to_newsletter: Prijaviti se na newsletter
+            password: Lozinka
+        login:
+            username: Korisničko ime
+            password: Lozinka
+            remember_me: Zapamti me
+            block:
+                body: Body
+                id: ID
+                title: Naslov
+
+        user_change_password:
+            current: Trenutna lozinka
+            new: Nova lozinka
+            confirmation: Potvrda
+        user:
+            plainPassword:
+                not_blankShow parameters: Molimo unesite lozinku.
+            username: Korisničko ime
+            enabled: Omogući
+            verified: Potvrđeno
+            first_name: Ime
+            last_name: Prezime
+            password:
+                label: Lozinka
+                confirmation: Potvrdite lozinku
+            country:
+                select: Izaberite
+            cart:
+                coupon: Kupon
+            catalog_promotion:
+                name: Ime
+                priority: Prioritet
+                start_date: Datum početka
+                end_date: Datum završetka
+                enabled: Omogući
+                exclusive: Ekskluzivan
+                label: Oznaka
+                description: Opis
+
+                channels: Kanali
+                scope:
+                    for_products: Za proizvode
+                    for_taxons: Za kategorije
+                    for_variants: Za varijante
+            checkout:
+                addressing:
+                    different_billing_address: Koristiti drugu adresu za isporuku?
+                    different_shipping_address: Koristi drugu adresu za slanje?
+                payment_method: Metoda plaćanja
+                shipping_method: Metoda slanja
+            currency:
+                select: Izaberi valutu
+            customer_group:
+                name: Ime
+            promotion:
+                channels: Kanali
+                name: Ime
+                description: Opis
+                usage_limit: Ograničenje upotrebe
+                starts_at: Datum početka
+                ends_at: Datum završetka
+                priority: Prioritet
+                coupon_based: Na osnovu kupona
+                exclusive: Ekskluzivan
+                applies_to_discounted: Primjenjuje se i na već snižene artikle iz porudžbine
+                applies_to_discounted_details: Ova opcija omogućava da se promocija u korpi primeni i na proizvode koji su već na popustu zahvaljujući kataloškim akcijama.
+
+            promotion_action:
+                order_fixed_discount: Fiksni popust na porudžbinu
+                order_percentage_discount: Procenat popusta na porudžbinu
+                item_percentage_discount: Procenat popusta na stavku
+                shipping_percentage_discount: Procenat popusta na isporuku
+                item_fixed_discount: Fiksni popust na stavku
+
+            add_product_configuration:
+                product: Proizvod
+
+            promotion_coupon:
+                per_customer_usage_limit: Ograničenje upotrebe po kupcu
+                reusable_from_cancelled_orders: Ponovno iskoristivo iz otkazanih porudžbina
+            group:
+                name: Naziv
+                roles: Uloge
+            channel:
+                color: Boja
+                enabled: Omogućeno
+                name: Ime
+                description: Opis
+                billing_data:
+                    city: Grad
+                    company: Kompanija
+                    country: Država
+                    postcode: Poštanski kod
+                    street: Ulica
+                    tax_id: PIB
+                contact_email: Kontakt email
+                contact_phone_number: Kontakt telefon
+                countries: Države
+                currencies: Valute
+                currency_base: Bazna valuta
+                account_verification_required: Da li je evrifikacija naloga obavezna?
+                hostname: Naziv hosta
+                locale_default: Bazni jezik
+                locales: Jezici
+                menu_taxon: Meni kategorija
+                payment_methods: Metode plaćanja
+                shipping_address_in_checkout_required: Adresa obavezna pri naplati
+                shipping_methods: Metode slanja
+                shop_billing_data: Podaci o naplati prodavnice
+                skipping_shipping_step_allowed: Preskočiti korak isporuke ako je dostupna samo jedna metoda isporuke?
+                skipping_payment_step_allowed: Preskočiti korak plaćanja ako je dostupna samo jedna metoda plaćanja?
+                tax_calculation_strategy: Strategija obračuna poreza
+                tax_zone_default: Osnovna zona poreza
+                taxonomies: Kategorije
+                theme: Tema
+            image:
+                type: Tip
+                file: Slika
+            locale:
+                code: Kod
+                enabled: Omogućen
+                name: Ime
+                select: Izaberite region...
+            order_filter:
+                created_at_from: Kreirano nakon
+                created_at_to: Kreirano pre
+                number: Broj
+                total_from: Od
+                total_to: Do
+                payment_state: Stanje naplate
+                channel: Svi kanali
+            page:
+                body: Body
+                id: ID
+                title: Naslov
+            product:
+                images: Slike
+                restricted_zone: Ograničena zona
+                short_description: Kratak opis
+                variant_selection_method: Metoda selekcije varijanti
+                main_taxon: Glavna kategorija
+                channels: Kanali
+                enabled: Omogućeno
+            product_filter:
+                name: Naziv
+                code: Kod
+            product_variant:
+                tax_category: Kategorija poreza
+                shipping_category: Kategorija slanja
+            shipment_filter:
+                created_at_from: Od
+                created_at_to: Do
+                number: Broj porudžbine
+                shipping_address: Pošalji na ime
+                channel: Svi kanali
+            payment_filter:
+                created_at_from: Od
+                created_at_to: Do
+                number: Broj porudžbine
+                billing_address: Naplati na ime
+                channel: Svi kanali
+            shipping_method:
+                zone: Zona
+            taxon:
+                code: Kod
+                file: Izaberi sliku
+                images: Slike
+            taxonomy:
+                file: Izaberi sliku
+            user:
+                billing_address: Adresa naplate
+                different_shipping_address: Koristi drugu adresu za slanje?
+                enabled: Omogućeno
+                first_name: Ime
+                groups: Grupe
+                roles: Uloge
+                last_name: Prezime
+                password: Lozinka
+                shipping_address: Adresa za slanje
+                verified: Potvrđeno
+            user_filter:
+                query: Pretraga
+            variant:
+                depth: Dubina
+                height: Visina
+                on_hand: Trenutno stanje
+                price: Cena
+                sku: SKU
+                shipping_required: Da li je slanje obavezno?
+                weight: Težina
+                width: Širina
+                tracked_help: Ako je ova opcija omogućena, Sylius će pratiti stanje zaliha i prestati sa prodajom proizvoda kada zaliha dostigne 0.
+            attribute:
+                product_attribute_value:
+                    attribute: Atribut
+                    value: Vrednost
+            guest:
+                email: Email
+            product_association:
+                product: Povezani proizvod
+                type: Tip asocijacije
+            product_association_type:
+                name: Naziv
+            promotion_filter:
+                products: Filter proizvoda
+                taxons: Filter kategorija
+            promotion_rule:
+                nth_order: Naredna porudžbina
+                shipping_country: Država isporuke
+                has_at_least_one_from_taxons: Obuhvata makar jedan iz sledećih kategorija
+                total_price_of_items_from_taxon: Ukupna cena artikala iz kategorije
+                contains_product: Sadrži proizvod
+                item_total: Ukupna cena stavki
+                cart_quantity: Količina u korpi
+                customer_group:
+                    group: Grupa kupaca
+                has_taxon:
+                    taxons: Kategorije
+                product:
+                    products: Proizvodi
+                total_of_items_from_taxon:
+                    taxon: Kategorija
+                    amount: Količina
+            payment_method:
+                channels: Kanali
+            product_attribute:
+                position: Pozicija
+            zone:
+                scopes:
+                    shipping: Slanje
+                    tax: Porez
+
+        installer:
+            extensions:
+                header: extensions
+                accelerator:
+                    header: Accelerator
+                    help: Enable Zend OpCache (highly recommended).
+                apc: APC
+                ctype: Ctype
+                gd: GD
+                help: Install and enable the %extension% extension.
+                iconv: Iconv
+                exif: Exif
+                fileinfo: Fileinfo
+                icu: ICU
+                intl: Intl
+                json_encode: JSON
+                mbstring: Multibyte String
+                off: off
+                on: on
+                pcre: PCRE
+                pdo: PDO
+                php_xml: PHP-XML
+                session_start: Session
+                simplexml_import_dom: SimpleXML
+                token_get_all: Tokenizer
+            filesystem:
+                header: file system
+                cache:
+                    header: cache
+                    help: "To set permissions run: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
+                exists: exists
+                logs:
+                    header: logs
+                    help: "To set permissions run: sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
+                not_exists: not exists
+                not_writable: not writable
+                parameters:
+                    header: parameters.yml
+                    help: "To set permissions run: sudo chmod a+w %path%"
+                vendors: vendors
+                writable: writable
+
+            settings:
+                header: PHP version and settings
+                any: any
+                detect_unicode: detect_unicode
+                detect_unicode_help: Set 'detect_unicode = Off' in your php.ini file
+                magic_quotes_gpc: magic_quotes_gpc
+                non_deprecated: non deprecated
+                off: off
+                on: on
+                register_globals: register_globals
+                session:
+                    auto_start: session.auto_start
+                    auto_start_help: Set 'session.auto_start  = Off' in your php.ini file
+                short_open_tag: short_open_tag
+                timezone: timezone
+                timezone_help: Set 'date.timezone' in your php.ini file (e.g. date.timezone = "Europe/Amsterdam")
+                timezone_deprecated:
+                    header: Deprecated timezone
+                    help: Timezone %timezone% is deprecated. Fix your php.ini file (list of deprecated timezones http://php.net/manual/en/timezones.others.php).
+                version: PHP version
+                version_recommended: Recommended PHP version
+                version_help: Sylius recommends %recommended% PHP version, your current version is %current%. Please upgrade.
+
+        shipping_method_resolver:
+            by_zones_and_channel: By zones and channel
+    email:
+        admin_password_reset:
+            hello: "Zdravo"
+            subject: "Resetovanje lozinke administratora"
+            reset_your_password: "Resetujte svoju lozinku"
+            to_reset_your_password: "Kako biste resetovali svoju lozinku- kliknite link ispod"
+            to_reset_your_password_token: "Kako biste resetovali svoju lozinku- koristite token ispod"
+            token: "Vaš token za resetovanje lozinke je"
+        contact_request:
+            content: "Sadržaj"
+            message_from: "Poruka od"
+            subject: "Zahtev kontakta"
+        order_confirmation:
+            has_been_successfully_placed: "je uspešno izvršena."
+            subject: "Potvrda porudžbine"
+            view_order_or_change_payment_method: "Pogledaj porudžbinu ili izmeni način plaćanja"
+            thank_you: "Hvala što kupujete u našoj prodavnici!"
+            your_order_number: "Broj vaše porudžbine"
+        password_reset:
+            hello: "Zdravo"
+            reset_your_password: "Resetujte vašu lozinku"
+            subject: "Resetovanje lozinke"
+            to_reset_your_password: "Kako biste resetovali svoju lozinku- kliknite link ispod"
+            to_reset_your_password_token: "Kako biste resetovali svoju lozinku- koristite token ispod"
+            token: "Vaš token za resetovanje lozinke je"
+        shipment_confirmation:
+            has_been_sent_using: "je poslata koristeći"
+            subject: "Potvrda pošiljke"
+            thank_you_for_transaction: "Hvala na uspešnoj transakciji."
+            you_can_check_its_location_with_the_tracking_code: "Možete proveriti lokaciju koristeći %tracking_code% kod za praćenje."
+            your_order_with_number: "Vaša porudžbina broj"
+        user_registration:
+            start_shopping: "Započni kupovinu"
+            subject: "Registracija korisnika"
+            welcome_to_our_store: "Dobrodošli u našu prodavnicu!"
+            you_have_just_been_registered: "Upravo ste se registrovali. Hvala!"
+        #deprecated since Sylius 1.13 and will be removed in 2.0, use user.verification instead
+        verification_token:
+            hello: "Zdravo"
+            message: "Verifikujte Vaš nalog sa tokenom: "
+            subject: "Verifikacija e-mail adrese"
+            to_verify_your_email_address: "Kako biste verifikovali svoju e-mail adresu- kliknite na link ispod"
+            verify_your_email_address: "Verifikujte svoju e-mail adresu"
+        user:
+            account_verification:
+                greeting: "Zdravo"
+                message: "Verifikujte svoj nalog sa tokenom: "
+                statement: "Verifikujte svoju e-mail adresu"
+                strategy: "Kako biste verifikovali svoju e-mail adresu- kliknite na link ispod"
+                subject: "Verifikacija e-mail adrese"
+    option:
+        name: Ime
+        position: Pozicija
+    option_value:
+        add_value: Dodaj vrednost
+    notes: Dodatna napomena
+    address:
+        city: Grad
+        company: Preduzeće
+        country: Zemlja
+        first_name: Ime
+        last_name: Prezime
+        phone_number: Broj telefona
+        postcode: Poštanski broj
+        province: Provincija
+        zone: Zona
+        street: Adresa
+
+    checkout:
+        addressing:
+            different_billing_address: Koristiti drugu adresu za naplatu?
+            different_shipping_address: Koristiti drugu adresu za dostavu?
+        payment_method: Metod plačanja
+        shipping_method: Metod dostave
+    variant:
+        tracked: Praćeno
+    menu:
+        shop:
+            account:
+                dashboard: Kontrolna tabla
+                address_book: Adresar
+                change_password: Promenite lozinku
+                header: Vaš nalog
+                order_history: Istorija porudžbina
+                personal_information: Lične informacije
+        admin:
+            main:
+                catalog:
+                    header: Katalog
+                    taxons: Kategorije
+                    products: Proizvodi
+                    inventory: Inventar
+                    association_types: Vrste povezanosti
+                    attributes: Atributi
+                    options: Opcije
+                sales:
+                    header: Prodaja
+                    orders: Narudžbina
+                customers:
+                    header: Kupac
+                    customers: Kupci
+                    groups: Grupe
+                marketing:
+                    cart_promotions: Akcije u korpi
+                    catalog_promotions: Promocije u katalogu
+                    product_reviews: Ocene proizvoda
+                configuration:
+                    header: Podešavanja
+                    channels: Kanali
+                    countries: Zemlje
+                    zones: Zone
+                    currencies: Valute
+                    exchange_rates: Kursna lista
+                    locales: Jezici
+                    payment_methods: Metode plaćanja
+                    shipping_methods: Način dostave
+                    shipping_categories: Kategorije dostave
+                    tax_categories: Vrste poreza
+                    tax_rates: Poreske stope
+                    admin_users: Administrativni korisnici
+                channel:
+                    period_for_which_the_lowest_price_is_calculated: Period za koji se izračunava najniža cena
+                    lowest_price_for_discounted_products_visible: Najniža cena za proizvode na popustu
+                official_support:
+                    header: Zvanična podrška
+                    browse_plugins: Pretraži dodatke
+                    professional_services: Stručne usluge
+                    find_a_partner: Pronađi saradnika
+    ui:
+        actions: Akcije
+        add_action: Dodajte akciju
+        add_choice: Dodajte izbor
+        add_coupon: Dodaj kupon
+        add_image: Dodaj sliku
+        add_member: Dodajte člana
+        add_province: Dodaj provinciju
+        add_rule: Dodajte pravilo
+        add_to_cart: Dodaj u korpu
+        addressing_step: Adresa
+        administration: Administracija
+        administration_dashboard: Administrativna tabla
+        all_your_addresses: Sve Vaše adrese
+        all_rights_reserved: Sva prava zadržana.
+        amount: Količina
+        assortment: Izbor
+        attributes: Atributi
+        availability: Dostupnost
+        available_on: Dostupno
+        back: Nazad
+        balance_due: Dugovni saldo
+        billing_address: Adresa za naplatu
+        blocks: Blokovi
+        body: Sadržaj
+        calculator: Kalkulator
+        cancel: Otkaži
+        cart_summary: Rezime korpe
+        categorization: Kategorizacija
+        category: Kategorija poreske stope
+        checkout: Završite kupovinu
+        choose_file: Fajl
+        city: Grad
+        clear_cart: Isprazni korpu
+        code: Kod
+        hello: Zdravo
+        hello_name: Zdravo <b>%name%</b>
+        company: Preduzeće
+        configuration: Podešavanja
+        confirmation: Potvrda
+        confirmation_title: Potvrda
+        content: Sadržaj
+        countries: Zemlje
+        country: Zemlja
+        country_details: Detalji zemlje
+        create: Kreiraj
+        create_a_new_address: Unesi novu adresu
+        create_country: Dodaj zemlju
+        create_new_coupon: Novi kupon
+        create_option: Kreirajte opciju
+        create_order: Kreirajte narudžbinu
+        create_payment: Kreiraj plaćanje
+        create_payment_method: Kreirajte metod plaćanja
+        create_product: Kreiraj proizvod
+        create_shipping_category: Nova kategorija slanja
+        create_shipping_method: Novi način dostave
+        create_tax_category: Kreirajte kategoriju poreza
+        create_tax_rate: Kreirajte porez
+        create_taxon: Kreiraj kategoriju
+        create_variant: Kreiraj varijantu
+        create_zone: Kreirajte zonu
+        created: Kreiran
+        created_at: Napravljeno
+        creation_time: Kreirano
+        current_orders: Trenutne narudžbine
+        current_password: Trenutna lozinka
+        current_promotions: Trenutne promocije
+        current_stock: Zalihe
+        customers: Kupci
+        dashboard: Kontrolna tabla
+        default_billing_address: Podrazumevana adresa za plaćanje
+        default_shipping_address: Podrazumevana adresa za slanje
+        delete: Obriši
+        delete_image: Izbrišite sliku
+        description: Opis
+        edit: Izmeni
+        edit_my_address: Izmeni moju adresu
+        editing_country: Izmenite zemlju
+        editing_coupon: Ažuriranje kupona
+        editing_exchange_rate: Izmeni kursnu listu
+        editing_option: Ažuriranje opcija
+        editing_order: Ažuriranje narudžbine
+        editing_payment: Ažuriranje plaćanja
+        editing_payment_method: Ažuriranje metoda plaćanja
+        editing_product: Ažuriranje proizvoda
+        editing_shipping_category: Ažuriranje kategorije slanja
+        editing_shipping_method: Ažuriranje načina dostave
+        editing_tax_category: Ažuriranje kategorije poreza
+        editing_taxon: Ažuriranje kategorizacije
+        editing_variant: Ažuriranje varijante
+        editing_zone: Ažuriranje zone
+        enabled: Omogućeno
+        ends_at: Završava se
+        error: Greška
+        exchange_rates: Kursna lista
+        existing_customer: Postojeća mušterija
+        filter: Filter
+        first_name: Ime
+        general_info: Opšte informacije
+        general_settings: Generalna podešavanja
+        generate: Generiši
+        generate_coupons: Generiši kupone
+        generate_variants: Generiši varijante
+        generating_coupons: Generisanje kupona
+        grand_total: Sveukupno
+        home: Početna strana
+        id: ID
+        images: Slike
+        information: Obaveštenje
+        inventory_here_you_can_see_current_stock_levels: Lager <small>Pregled stanja zaliha</small>
+        inventory_state: stanje zaliha
+        inventory_tracking: Praćenje zaliha
+        invoice: Faktura
+        items_total: Ukupno proizvoda
+        last_login: Poslednje prijavljivanje
+        last_name: Prezime
+        last_update: poslednja izmena
+        last_week_orders: Prošlonedeljne porudžbine
+        last_week_revenue: Prošlonedeljna zarada
+        lastname: Prezime
+        latest_orders: Najnovije narudžbine
+        list_coupons: Lista kupona
+        locales: Lokalni
+        login: Prijavi se
+        login_button: Prijavi se
+        logout: Odjavi se
+        manage: Upravljaj
+        manage_adjustments: Upravljaj prilagođavanjima
+        manage_admin_users: Upravljaj administratorima
+        manage_association_types_of_your_products:
+            Upravljaj tipovima povezanosti tvojih
+            proizvoda
+        manage_attributes: Upravljaj atributima
+        manage_attributes_of_your_products: Upravljaj atributima tvojih proizvoda
+        manage_categorization_of_your_products: Upravljaj kategorizacijom tvojih proizvoda
+        manage_channels: Upravljaj kanalima
+        manage_configuration_options_of_your_products:
+            Upravljaj opcijama konfiguracije
+            tvojih proizvoda
+        manage_countries: Upravljaj državama
+        manage_coupons: Upravljaj kuponima
+        manage_currencies_available_in_the_store: Upravljaj valutama dostupnim u prodavnici
+        manage_customer_groups: Upravljaj grupama svojih kupaca
+        manage_customers: Upravljaj kupcima
+        manage_discounts_and_promotional_campaigns:
+            Upravljaj popustima i promotivnim
+            kampanjama
+        manage_discounts_on_product_catalog: Upravljaj popustima u katalogu proizvoda
+        manage_emails: Upravljaj e-mailovima
+        manage_exchange_rates: Upravljaj deviznim kursevima
+        manage_geographical_zones: Upravljaj geografskim zonama
+        manage_inventory: Upravljaj zalihama
+        manage_languages_available_in_the_store: Upravljaj jezicima dostupnim u prodavnici
+        manage_metadata: Upravljaj metapodacima
+        manage_options: Upravljaj opcijama
+        manage_orders: Upravljaj porudžbinama
+        manage_payment_methods_available_to_your_customers:
+            Upravljaj metodama plaćanja
+            dostupnim tvojim kupcima
+        manage_payments: Upravljaj uplatama
+        manage_product_positions: Upravljaj pozicijama proizvoda
+        manage_product_positions_in_taxon: Upravljaj pozicijama proizvoda u %taxon_name%
+        manage_products: Upravljaj proizvodima
+        manage_promotions: Upravljaj promocijama u korpi
+        manage_reviews: Upravljaj recenzijama
+        manage_reviews_of_your_products: Upravljaj recenzijama tvojih proizvoda
+        manage_shipments: Upravljaj pošiljkama
+        manage_shipping_categories: Upravljaj kategorijama isporuke
+        manage_shipping_categories_for_your_store:
+            Upravljaj kategorijama isporuke za
+            tvoju prodavnicu
+        manage_shipping_destinations: Upravljaj destinacijama isporuke
+        manage_shipping_methods: Upravljaj metodama isporuke
+        manage_shipping_methods_for_your_store: Upravljaj metodama isporuke za tvoju prodavnicu
+        manage_tax_categories: Upravljaj poreskim kategorijama
+        manage_tax_rates: Upravljaj poreskim stopama
+        manage_taxation_of_your_products: Upravljaj oporezivanjem tvojih proizvoda
+        manage_taxons: Upravljaj kategorijama
+        manage_users: Upravljaj korisnicima
+        manage_users_able_to_access_administration_panel:
+            Upravljaj korisnicima koji imaju
+            pristup administratorskom panelu
+        manage_variants: Upravljaj varijantama
+        manage_your_customers: Upravljaj svojim kupcima
+        manage_your_personal_information_and_preferences:
+            Upravljaj svojim ličnim podacima
+            i podešavanjima
+        manage_your_product_catalog: Upravljaj svojim katalogom proizvoda
+        manage_your_saved_addresses: Upravljaj svojim sačuvanim adresama
+        manage_zones: Upravljaj zonama
+        members: Članovi
+        method: metod
+        modified: izmenjeno
+        my_account: Moj nalog
+        name: Ime
+        new: Novi/nova
+        new_country: Nova zemlja
+        new_order: Nova narudžbina
+        new_password: Nova lozinka
+        new_payment: Novo plaćanje
+        new_payment_method: Novi metod plaćanja
+        new_product: Novi proizvod
+        new_product_option: Nova opcija proizvoda
+        new_product_variant: Nova varijanta proizvoda
+        new_shipping_category: Nova kategorija slanja
+        new_shipping_method: Novi način dostave
+        new_tax_category: Nova kategorija poreza
+        new_tax_rate: Novi porez
+        new_taxon: Nova kategorija
+        new_zone: Nova zona
+        newest_products: Najnoviji proizvodi
+        next: Sledeća
+        no_default_billing_address: Nema podrazumevane adrese za plaćanje
+        no_default_shipping_address: Nema podrazumevane adrese za slanje
+        no_description: Nema opisa
+        no_promotion: Nijedna promocija nije dodata
+        no_shipping_charges: Nisu dodati troškovi porudžbine
+        no_short_description: <i>Nema kratkog opisa</i>
+        no_sku: <i>Nema SKU</i>
+        no_tax_category: Nema kategorije poreza
+        no_taxes: Nisu dodati porezi
+        number: Broj
+        number_of_orders: Broj narudžbina
+        options: Opcije
+        order: Narudžbina
+        order_history: Istorija porudžbenica
+        order_details: Detalji Vaše narudžbine
+        order_summary: Rezime narudžbine
+        order_value: Vrednost narudžbine
+        orders: Narudžbine
+        original_price_details: Originalna cena – ovo je cena varijante proizvoda. Prikazuje se u katalogu kao precrtana. Koristi se kao osnova za izračunavanje trenutne cene. Ako ova vrednost nije definisana, logika promocija u katalogu će kopirati vrednost iz Cena u Originalnu cenu.
+        out_of_stock: Nema na lageru
+        overview_of_your_store: Pregled prodavnice
+        pages: Strane
+        pagination.number_of_results:
+            Showing 1 to 1 of 1 entries: Prikazan je 1 od 1 unosa
+        parent: Roditelj
+        password: Lozinka
+        payment_method: Metod plaćanja
+        payment_methods: Metodi plaćanja
+        payment_state: Stanje plaćanja
+        payments: Plaćanja
+        pending: Obrada u toku
+        phone_number: Broj telefona
+        place_order: Kreirajte narudžbinu
+        placed_at: Postavljen na
+        postcode: Poštanski broj
+        presentation: Prikaz
+        previous: Prethodna
+        price: Cena
+        price_details: Cena – ovo je trenutna cena prikazane varijante proizvoda u katalogu. Može biti izmenjena eksplicitno, na primer putem promocija u katalogu.
+        product: Proizvod
+        product_details_viewing_product_product:
+            Detalji proizvoda <small>Pregled proizvoda
+            "<strong>%product%</strong>"</small>
+        product_options: Opcije proizvoda
+        products: Proizvodi
+        products_categorized_under_taxon_taxon: Proizvodi <small>Kategorisani u "%taxon%"</small>
+        products_index_of_all_products_in_your_store:
+            Proizvodi <small>Svi proizvodi u
+            prodavnici</small>
+        product.product_not_active_in_channel: Proizvod još nije aktiviran u ovom kanalu.
+        promotion_details: Detalji promocije
+        promotion_total: Ukupno promocije
+        properties: Atributi
+        province: Provincija
+        provinces: Provincije
+        powered_by: Powered by
+        qty: Količina
+        quantity: Količina
+        recent_orders: Poslednje narudžbine
+        recent_users: Poslednji korisnici
+        register: Registracija
+        register_button: Registracija
+        retail_price: Prodajna cena
+        rules: Pravila
+        sales: Prodaje
+        sales_this_month: Prodaje
+        save: Sačuvaj
+        save_changes: Sačuvaj izmene
+        scope: Obuhvat
+        select: Izaberite
+        set_as_default_billing_address: Postavi podrazumevanu adresu za plaćanje
+        set_as_default_shipping_address: Postavi podrazumevanu adresu za slanje
+        shipment_details: Detalji pošiljke
+        shipment_state: Stanje pošiljke
+        shipments: Pošiljke
+        shipping_address: Adresa za slanje
+        shipping_categories: Kategorije isporuka
+        shipping_charges: Cena isporuke
+        shipping_method: Način dostave
+        shipping_method_details: Detalji načina dostave
+        shipping_methods: Načini dostave
+        shipping_state: Stanje pošiljke
+        shipping_total: Ukupno isporuka
+        shop_by: Kupujte po
+        ship_to: Poslato ka
+        show: Prikažite
+        show_all: Prikaži sve
+        show_deleted: Prikaži obrisane
+        show_history_for_channel_pricing: Prikažite istoriju cena za dati prodajni kanal
+        show_in: Prikaži u
+        show_in_store: Prikaži u radnji
+        show_metadata: prikaži meta podatke
+        show_order_details: Prikažite detalje porudžbine
+        show_orders: Prikažite porudžbine
+        show_product: Prikažite proizvode
+        show_product_in_shop_page: Prikaži proizvod na Shop-u
+        sign_in_to_the_store_or_create_new_account:
+            Ulogujte se <small>ili napravite novi
+            nalog</small>
+        sku: SKU
+        slideshow: Galerija
+        starts_at: Počinje
+        statistics:
+            2weeks: 2 nedelje
+            month: Meseca
+            year: Godina
+        state: Stanje
+        street: Ulica
+        success: Uspeh
+        sylius_logo: Sylius
+        taxon: Kategorija
+        tax_category: Kategorija proizvoda
+        tax_rate_details: Detalji poreza
+        tax_rates: Poreske stope
+        tax_total: Ukupno porezi
+        taxation_categories: Kategorije poreza
+        taxation_settings: Podešavanja poreza
+        taxes: Porezi
+        there_are_no_images_for_this_product: Nema slika za ovaj proizvod
+        there_are_no_options_for_this_product: Nema opcija za ovaj proizvod
+        there_are_no_taxons_for_this_product: sylius.product.no_taxons
+        this_months_statistics: Statistika ovoga meseca
+        title: Naslov
+        total: Ukupno
+        total_orders: Ukupno porudžbina
+        total_registrations: Ukupno prijavljenih
+        tracking_number: Broj za praćenje porudžbine
+        type: Tip
+        unit_price: Cena po komadu
+        updating_tax_rate: Ažuriranje poreske stope
+        usage_limit: Ograničenje korišćenja
+        used: Korišćeno
+        user_details: Detalji korisnika
+        username: Korisničko ime
+        users_list_of_all_users_registered_in_store:
+            Korisnici <small>Lista svih registrovanih
+            korisnika</small>
+        variant_selection_method: Metod izbora varijante proizvoda
+        view_more: Više
+        view_in_store: Pogledaj u prodavnici
+        warning: Upozorenje
+        welcome_to_your_space: Dobro došli na Vašu stranicu
+        you_are_customer_since: Vi ste kupac još od
+        you_have_no_new_orders: Nema novih narudžbina
+        your_cart_is_empty: Vaša korpa je prazna
+        your_products: Vaši proizvodi
+        zone: Zona
+        zone_details: Detalji zone
+        zones: Zone
+        abandoned: Napušteno
+        about: O
+        accept: Prihvati
+        accepted: Prihvaćeno
+        access_token: Token Pristupa
+        access_your_store_account_or_create_a_new_one: Pristupi svom nalogu ili kreiraj novi
+        account_credentials: Kredencijali naloga
+        account_credentials_details:
+            Ova sekcija je opciona. Ako prosledite lozinku,
+            biće kreiran korisnički nalog za kupca.
+        account_panel_outline:
+            Uživajte u svim funkcijama koje su dostupne na vašem ličnom
+            prostor za pregled, praćenje i upravljanje svim vašim podacima
+        action: Akcija
+        active: Aktivan
+        add: Dodaj
+        add_address: Dodaj adresu
+        add_association: Dodaj asocijaciju
+        add_attribute: Dodaj atribut
+        add_attributes: Dodaj atribute
+        add_channel: Dodaj kanal
+        add_menu_element: Dodaj novi Email
+        add_new_permission: Dodaj novu permisiju
+        add_new_role: Dodaj novu rolu
+        add_scope: Dodaj obim
+        add_value: Dodaj vrednost
+        add_your_review: Dodaj svoju recenziju
+        adding_new_customer_groups: Dodavanje novih grupa klijenata
+        adding_new_email: Dodavanje novog Email-a
+        adding_new_locale: Dodavanje novog jezika
+        additional_information: Dodatne informacije
+        address: Adresa
+        address_book: Adresar
+        addresses: Adrese
+        addressing: Adresiranje
+        adjustments: Izmene
+        admin_users: Administratori
+        administration_panel_login: Login na administracioni panel
+        administration_reset_password: Promena administracione lozinke
+        all: Sve
+        an_error_occurred: Došlo je do greške
+        api: Api
+        applied_coupon: Primenjen kupon
+        apply_coupon: Primeni kupon
+        apply_to_all: Primeni na sve
+        archival: Arhivski
+        archive: Arhiva
+        are_your_sure_you_want_to_perform_this_action:
+            Da li ste sigurni da želite da izvršite
+            ovu akciju?
+        association: Asocijacija
+        association_types: Tipovi asocijacije
+        associations: Asocijacije
+        author: Autor
+        authorize: Autorizuj
+        authorized: Autorizovan
+        authorized_payment: Autorizovano plaćanje
+        available_for_channels: Dostupno za kanale
+        available_on_hand: Dostupno u ruci
+        available_until: Dostupno do
+        avatar: Avatar
+        average_order_value: Prosečna vrednost porudžbine
+        average_rating: Prosečna ocena
+        awaiting_payment: Čeka se uplata
+        back_to_details: Nazad na detalje
+        back_to_store: Nazad u prodavnicu
+        backorder: Porudžbina na čekanju
+        backordered: Na čekanju
+        base_currency: Osnovna valuta
+        base_currency_order_total: Ukupan iznos u osnovnoj valuti
+        bill_to: Naplatiti na
+        billing_address_changes_history: Istorija promena adrese za naplatu
+        browse_all_products: Pregledaj sve proizvode
+        browse_products: Pregledaj proizvode
+        browse_your_addresses: Pregledaj svoje adrese
+        browse_your_orders_from_the_past: Pregledaj svoje prethodne porudžbine
+        build: Izgradi
+        bulk_actions: Grupne akcije
+        by_position: Po poziciji
+        call_us: Pozovite nas!
+        cancelled: Otkazano
+        capture: Naplati
+        cart: Korpa
+        cart_locked: Korpa zaključana
+        catalog_promotion: Promocija kataloga
+        catalog_promotions: Promocije kataloga
+        category_requirements: Zahtevi kategorije
+        change_address: Promeni adresu
+        change_file: Promeni fajl
+        change_password: Promeni lozinku
+        change_payment_method: Promeni metod plaćanja
+        change_position: Promeni poziciju
+        channel_pricings: Cene kanala
+        change_shipping_method: Promeni način isporuke
+        change_your_password: Promeni svoju lozinku
+        changes: Izmene
+        channel: Kanal
+        channels: Kanali
+        charges_and_taxes: Naknade i porezi
+        cheapest_first: Najjeftinije prvo
+        check_all: Označi sve
+        checkbox: Polje za potvrdu
+        checking_out_as: Plaćate kao
+        choose_channel: Izaberite kanal
+        choose_how_you_will_pay: Izaberite način plaćanja
+        choose_how_your_goods_will_be_delivered: Izaberite kako će roba biti isporučena
+        clear: Obriši
+        clear_filters: Očisti filtere
+        color: Boja
+        comment: Komentar
+        complete: Završeno
+        completed: Završeno
+        configurable_product: Podesiv proizvod
+        configure_channels_available_in_your_store: Podesite dostupne kanale u prodavnici
+        confirm_your_action: Potvrdite vašu akciju
+        confirmed: Potvrđeno
+        contact_us: Kontaktirajte nas
+        contact_your_technician_to_upgrade: Kontaktirajte tehničara za nadogradnju
+        contain_variants: Sadrži varijante
+        contains: Sadrži
+        copyright: Autorska prava
+        country_code: Kod zemlje
+        coupon: Kupon
+        coupon_based: Na osnovu kupona
+        coupons: Kuponi
+        create_a_new_customer_account: Kreirajte novi korisnički nalog
+        create_an_account: Napravite nalog
+        create_association_type: Kreirajte tip povezanosti
+        create_child: Kreirajte podstavku
+        create_currency: Dodajte valutu
+        create_customer: Dodajte korisnika
+        create_imagine_block: Kreirajte imagine blok
+        create_locale: Dodajte lokalizaciju
+        create_menu: Kreirajte meni
+        create_menu_node: Dodajte stavku menija
+        create_new_page: Kreirajte novu stranicu
+        create_new_report: Kreirajte novi izveštaj
+        create_product_association: Kreirajte povezanost proizvoda
+        create_product_association_type: Kreirajte tip povezanosti proizvoda
+        create_product_attribute: Kreirajte atribut proizvoda
+        create_promotion: Kreirajte promociju
+        create_report: Kreirajte izveštaj
+        create_simple_block: Kreirajte jednostavan blok
+        create_slideshow_block: Kreirajte slideshow blok
+        create_string_block: Kreirajte tekstualni blok
+        create_user: Kreirajte korisnika
+        creating_a_new_imagine_block: Kreiranje novog imagine bloka
+        creating_a_new_simple_block: Kreiranje jednostavnog bloka
+        creating_a_new_slideshow_block: Kreiranje slideshow bloka
+        creating_a_new_string_block: Kreiranje tekstualnog bloka
+        creating_menu: Kreiranje menija
+        creating_menu_node: Kreiranje stavke menija
+        creating_new_page: Kreiranje nove stranice
+        creation_date: Datum kreiranja
+        criteria: Kriterijumi
+        currencies: Valute
+        currency: Valuta
+        customer: Kupac
+        customer_can_login_to_the_store: Može li se kupac prijaviti u prodavnicu?
+        customer_care: Podrška za korisnike
+        customer_details: Detalji o kupcu
+        customer_group: Grupa kupaca
+        customer_groups: Grupe kupaca
+        customer_id: ID kupca
+        customer_login: Prijava kupca
+        customer_not_notified: Kupac nije obavešten
+        customer_notified: Kupac je obavešten
+        customer_orders: Porudžbine kupca
+        customer_since: Kupac od
+        customers_list_of_all_customers_in_store: Kupci <small>Lista svih kupaca u prodavnici</small>
+        customize_default_metadata: Prilagodi podrazumevane meta podatke
+        customize_metadata: Prilagodi meta podatke
+        customize_products_metadata: Prilagodi meta podatke proizvoda
+        customizing_metadata: Prilagođavanje meta podataka
+        data: Podaci
+        date: Datum
+        date_filter: "%label% | %altLabel%"
+        date_range: Opseg datuma
+        datetime: Datum i vreme
+        days: Dani
+        default: Podrazumevano
+        default_address: Podrazumevana adresa
+        default_currency: Podrazumevana valuta
+        default_locale: Podrazumevani jezik
+        delete_products: Obriši proizvode
+        deleted: Obrisano
+        delivery_and_shipping: Isporuka i dostava
+        depth: Dubina
+        details: Detalji
+        disable: Onemogući
+        disabled: Onemogućeno
+        discount: Popust
+        discounted_by: Sniženo za
+        discounted_unit_price: Snižena cena po komadu
+        display: Prikaz
+        distributed_order_discount: Raspodeljeni popust na porudžbinu
+        documentation: Dokumentacija
+        edit_addresses: Izmeni adrese
+        edit_admin_user: Izmeni administratora
+        edit_association_type: Izmeni tip povezanosti
+        edit_catalog_promotion: Izmeni promociju kataloga
+        edit_channel: Izmeni kanal
+        edit_country: Izmeni zemlju
+        edit_coupon: Izmeni kupon
+        edit_currency: Izmeni valutu
+        edit_customer: Izmeni kupca
+        edit_exchange_rate: Izmeni devizni kurs
+        edit_locale: Izmeni lokalizaciju
+        edit_order: Izmeni porudžbinu
+        edit_payment_method: Izmeni metod plaćanja
+        edit_product: Izmeni proizvod
+        edit_product_association_type: Izmeni tip povezanosti proizvoda
+        edit_product_attribute: Izmeni atribut proizvoda
+        edit_product_option: Izmeni opciju proizvoda
+        edit_product_review: Izmeni recenziju proizvoda
+        edit_product_variant: Izmeni varijantu proizvoda
+        edit_promotion: Izmeni promociju
+        edit_promotion_coupon: Izmeni kupon za promociju
+        edit_report: Izmeni izveštaj
+        edit_shipping_address: Izmeni adresu za isporuku
+        edit_shipping_category: Izmeni kategoriju isporuke
+        edit_shipping_method: Izmeni metod isporuke
+        edit_tax_category: Izmeni poresku kategoriju
+        edit_tax_rate: Izmeni poresku stopu
+        edit_taxon: Izmeni kategoriju
+        edit_your_items_apply_coupon_or_proceed_to_the_checkout: Izmenite artikle, primenite kupon ili nastavite ka naplati
+        edit_your_personal_information: Izmenite lične podatke
+        edit_zone: Izmeni zonu
+        editing_attribute: Izmena atributa
+        editing_channel: Izmena kanala
+        editing_currency: Izmena valute
+        editing_customer: Izmena kupca
+        editing_email: Izmena emaila
+        editing_imagine_block: Izmena imagine bloka
+        editing_menu: Izmena menija
+        editing_menu_node: Izmena stavke menija
+        editing_page: Izmena stranice
+        editing_permission: Izmena dozvole
+        editing_promotion: Izmena promocije
+        editing_review: Izmena recenzije
+        editing_role: Izmena uloge
+        editing_shipment: Izmena isporuke
+        editing_simple_block: Izmena jednostavnog bloka
+        editing_slideshow_block: Izmena slideshow bloka
+        editing_string_block: Izmena tekstualnog bloka
+        editing_user: Izmena korisnika
+        email: Email
+        email_templates: Šabloni emailova
+        email_verified: Email potvrđen
+        emails: Emailovi
+        empty: Prazno
+        enable: Omogući
+        enabled_permission_checker: Omogući proveru dozvola.
+        end_date: Datum završetka
+        ends_with: Završava se sa
+        enjoy_all_the_features_that_are_available_on_your_personal_space_to_view_track_and_manage_all_your_data: Iskoristite sve funkcije u vašem korisničkom prostoru za pregled, praćenje i upravljanje podacima
+        enter_your_code: Unesite kod
+        equal: Jednako
+        exchange_rate: Devizni kurs
+        exclusive: Ekskluzivno
+        expiration_and_usage_limits: Rok trajanja i ograničenja korišćenja
+        expires_at: Ističe
+        extra_information: Dodatne informacije
+        extra_notes: Dodatne beleške
+        failed: Neuspešno
+        faqs: Često postavljana pitanja
+        female: Žensko
+        fill_in_your_billing_and_shipping_addresses: Unesite adresu za naplatu i isporuku
+        filters: Filteri
+        fixed_discount: Fiksni popust
+        float: Decimalni broj
+        for_products: Za proizvode
+        for_taxons: Za kategorije
+        for_variants: Za varijante
+        forgot_password: Zaboravljena lozinka?
+        from: Od
+        from_a_to_z: Od A do Š
+        from_the_newest: Od najnovijih
+        from_the_oldest: Od najstarijih
+        from_z_to_a: Od Š do A
+        fulfill: Ispuni
+        fulfilled: Ispunjeno
+        fulfilled_orders: Ispunjene porudžbine
+        gateway: Platni prolaz
+        gateway_configuration: Podešavanje platnog prolaza
+        general: Opšte
+        get_support: Zatraži podršku
+        go: Idi
+        go_level_up: Idi nivo iznad
+        go_to_dashboard: Idi na kontrolnu tablu
+        greater_than: Veće od
+        group_membership: Članstvo u grupi
+        guest: Gost
+        guest_customer: Gost kupac
+        have_an_account_already: Već imate nalog?
+        hash: Heš
+        height: Visina
+        hide_deleted: Sakrij obrisane
+        history: Istorija
+        hostname: Naziv hosta
+        identifier: Identifikator
+        if_you_have_an_account_sign_in_with_your_email_address: Ako već imate nalog, prijavite se svojom email adresom
+        image: Slika
+        imagine_blocks: Imagine blokovi
+        impersonate: Imenom drugog korisnika
+        in: U
+        inactive: Neaktivno
+        included_in_price: Uključeno u cenu
+        index_metadata: Meta podaci
+        index_of_all_configured_locales: Spisak svih podešenih lokalizacija
+        info: Informacije
+        integer: Celi broj
+        inventory: Zalihe
+        invalid_credentials: Neispravni podaci
+        inventory_index: Zalihe
+        is_enabled: Da li je omogućeno
+        issue_tracker: Prijava problema
+        it_seems_you_have_an_account_already: Izgleda da već imate nalog
+        item: Stavka
+        item_discount: Popust po stavci
+        items: Stavke
+        join_slack: Pridruži se na Slack
+        jump_to_page: Idi na stranicu
+        label: Oznaka
+        last_updated: Poslednje ažurirano
+        latest_products: Najnoviji proizvodi
+        less_than: Manje od
+        license: Licenca
+        links: Linkovi
+        list_payment_requests: Lista zahteva za plaćanje
+        list_variants: Lista varijanti
+        loading: Učitavanje
+        locale: Lokalizacija
+        lock: Zaključaj
+        locked: Zaključano
+        logged_at: Prijavljen u
+        logged_in_as: Prijavljeni ste kao %username%
+        login_sylius_store: Prijava <small>Sylius prodavnica</small>
+        login_to_your_account: Prijavite se na svoj nalog
+        look_and_feel: Izgled i doživljaj
+        lowest_price_before_discount: Najniža cena pre popusta
+        main_taxon: Glavne kategorije
+        male: Muško
+        marketing: Marketing
+        media: Mediji
+        menu_nodes: Stavke menija
+        menus: Meniji
+        message: Poruka
+        meta_description: Meta opis
+        meta_keywords: Meta ključne reči
+        metadata_index: Meta podaci
+        minimum_price: Minimalna cena
+        minimum_price_details: Minimalna cena – ovo je cenovni prag ispod kojeg trenutna cena ne može biti snižena ni putem promocija u katalogu ni u korpi. Koristite ovu vrednost da zaštitite profitabilnost svojih prodaja.
+        missing_translation: Nedostaje prevod
+        money: Novac
+        money_filter: "%label% | %altLabel%"
+        most_expensive_first: Najskuplje prvo
+        move_down: Pomeri naniže
+        move_up: Pomeri naviše
+        n_a: Nije primenjivo
+        need_assistance: Treba vam pomoć?
+        new_admin_user: Novi administrator
+        new_catalog_promotion: Nova promocija kataloga
+        new_channel: Novi kanal
+        new_comment_posted_on_order: Novi komentar na porudžbinu
+        new_coupon: Novi kupon
+        new_currency: Nova valuta
+        new_customer: Novi kupac
+        new_customers: Novi kupci
+        new_exchange_rate: Novi kurs
+        new_locale: Nova lokalizacija
+        new_orders: Nove porudžbine
+        new_permission: Nova dozvola
+        new_product_association_type: Novi tip povezanosti proizvoda
+        new_product_attribute: Novi atribut proizvoda
+        new_promotion: Nova promocija korpe
+        new_promotion_coupon: Novi kupon za promociju
+        new_review: Nova recenzija
+        new_role: Nova uloga
+        new_user: Novi korisnik
+        newest_first: Najnovije prvo
+        no_account: Nemate nalog
+        no_addresses: Nema adresa za prikazivanje
+        no_association_types_to_display: Nema definisanih tipova povezanosti
+        no_associations_to_display: Nema povezanosti za prikaz
+        no_comment: Nema komentara
+        no_label: "Ne"
+        no_new_notifications: Nema novih obaveštenja
+        no_payment_methods_available: Trenutno nema dostupnih metoda plaćanja za vašu porudžbinu
+        no_payments: Porudžbina bez plaćanja
+        no_pricing_configuration: Nema podešavanja cena
+        no_requirement: Nema zahteva
+        no_results: Nema rezultata
+        no_results_to_display: Nema rezultata za prikaz
+        no_results_adjust_your_search: Prilagodite pretragu i pokušajte ponovo.
+        no_shipping_category: Nema kategorije isporuke
+        no_shipping_data: Nema podataka o isporuci
+        no_shipping_methods_available: Trenutno nema dostupnih metoda isporuke za vašu adresu
+        no_theme: Nema teme
+        not_available_in_your_country: Nije dostupno u vašoj zemlji
+        not_contains: Ne sadrži
+        not_empty: Nije prazno
+        not_equal: Nije jednako
+        not_in: Nije u
+        not_tracked: Nije praćeno
+        not_verified: Nije potvrđeno
+        notes: Beleške
+        notify: Obavesti
+        notify_customer: Obavesti kupca
+        notifications:
+            new_version_of_sylius_available: Dostupna je nova verzija Sylius-a. Kontaktirajte svog tehničara radi nadogradnje.
+        oauth_provider: OAuth provajder
+        oldest_first: Najstarije prvo
+        on_hold: Na čekanju
+        options_matching: Podudaranje opcija
+        or: ili
+        order_comment_name: Komentar porudžbine
+        order_comments: Komentari porudžbine
+        order_confirmation_name: Potvrda porudžbine
+        order_discount: Popust na porudžbinu
+        order_item_product: Stavka
+        order_state: Status porudžbine
+        order_total: Ukupno za porudžbinu
+        ordered: Poručeno
+        orders_statistics: Statistika porudžbina
+        original_price: Originalna cena
+        page: Stranica
+        paid: Plaćeno
+        paid_orders: Plaćene porudžbine
+        partially_authorized: Delimično autorizovano
+        partially_paid: Delimično plaćeno
+        partially_shipped: Delimično poslato
+        pay: Plati
+        pay_again: Kliknite na „Plati“ da pokušate ponovo
+        payload: Sadržaj (payload)
+        payment: Plaćanje
+        payment_details: Detalji plaćanja
+        payment_mode: Način plaćanja
+        payment_ready_to_pay: Možete izvršiti plaćanje
+        payment_request: Zahtev za plaćanje
+        payment_requests: Zahtevi za plaćanje
+        payout: Isplata
+        per_customer_usage_limit: Ograničenje korišćenja po kupcu
+        percent: Procenat
+        percentage_discount: Procentualni popust
+        permissions: Dozvole
+        personal_information: Lični podaci
+        phone: Telefon
+        placed_an_order: Uspešno ste napravili porudžbinu.
+        please_sign_in: Prijavite se
+        position: Pozicija
+        preferences: Podešavanja
+        price_history: Istorija cena
+        pricing: Cene
+        priority: Prioritet
+        privacy_policy: Politika privatnosti
+        process_your_orders: Obradite porudžbine
+        processing: U obradi
+        product_association_index: Povezanost
+        product_association_type_index: Tip povezanosti
+        product_association_type: Tip povezanosti proizvoda
+        product_association_types: Tipovi povezanosti proizvoda
+        product_associations: Povezanosti proizvoda
+        product_attribute: Atribut proizvoda
+        product_attributes: Atributi proizvoda
+        product_option: Opcija proizvoda
+        product_page: Stranica proizvoda
+        product_review: Recenzija proizvoda
+        product_reviews: Recenzije proizvoda
+        product_taxon: Kategorija proizvoda
+        product_taxons: Kategorije proizvoda
+        product_variants: Varijante proizvoda
+        products_categorized_as_name: Proizvodi kategorisani kao "%name%"
+        products_positions: Pozicije proizvoda
+        profile: Profil
+        promotion: Promocija korpe
+        promotion_configuration: Podešavanje promocije
+        promotion_coupons: Kuponi
+        promotion_discount: Popust u promociji
+        promotion_information: Informacije o promociji
+        promotions: Promocije korpe
+        province_code: Šifra provincije
+        province_name: Naziv provincije
+        purchased_from: Kupljeno iz
+        qty_max: Maks. količina
+        qty_min: Min. količina
+        rating: Ocena
+        ratio: Odnos
+        ready: Spremno
+        recent_customers: Nedavni kupci
+        records: Zapisi
+        refund: Povraćaj
+        refunded: Vraćeno
+        register_in_the_store: Registrujte se u prodavnici
+        registered_customers: Registrovani kupci
+        registration_create_an_account_in_store: Registracija <small>Kreirajte nalog u prodavnici</small>
+        registration_date: Datum registracije
+        reject: Odbij
+        rejected: Odbijeno
+        release_inventory: Oslobodi zalihe
+        remember_me: Zapamti me
+        remove_attribute: Ukloni atribut
+        repeat_new_password: Ponovite novu lozinku
+        report_an_issue: Prijavite problem
+        report_details: Detalji izveštaja
+        report_it: Prijavi
+        reports: Izveštaji
+        resend_the_order_confirmation_email: Pošalji ponovo email sa potvrdom porudžbine
+        resend_the_shipment_confirmation_email: Pošalji ponovo potvrdu o isporuci
+        reserved: Rezervisano
+        reset: Resetuj
+        reset_button: Resetuj
+        reset_password: Resetuj lozinku
+        response_data: Podaci odgovora
+        restore: Vrati
+        return: Povratak
+        returned: Vraćeno
+        returns_policy: Politika povraćaja
+        revert: Vrati nazad
+        review_and_confirm_your_order: Pregledajte i potvrdite porudžbinu
+        review_details: Detalji recenzije
+        reviews: Recenzije
+        roles: Uloge
+        save_positions: Sačuvaj pozicije
+        scopes: Obuhvati
+        search: Pretraga
+        search_products: Pretraži proizvode
+        security_settings: Bezbednosna podešavanja
+        see_issue: Pogledaj problem
+        select_address_from_book: Izaberi adresu iz adresara
+        select_products: Izaberi proizvode
+        select_taxon: Izaberi kategoriju
+        send: Pošalji
+        server_has_encountered_some_errors: Server je naišao na greške.
+        set_a_new_password_for_your_account: Postavite novu lozinku za svoj nalog
+        set_as_default: Postavi kao podrazumevano
+        ship: Pošalji
+        shipment: Pošiljka
+        shipment_confirmation_name: Potvrda pošiljke
+        shipment_mode: Način isporuke
+        shipped: Poslato
+        shipped_at: Poslato u
+        shipping: Isporuka
+        shipping_address_changes_history: Istorija promena adrese za isporuku
+        shipping_and_payment_methods: Načini isporuke i plaćanja
+        shipping_category: Kategorija isporuke
+        shipping_discount: Popust na isporuku
+        shipping_estimated_cost: Procena troškova isporuke
+        shipping_not_required: Isporuka nije potrebna
+        shipping_required: Potrebna isporuka
+        shop_by_brand: Kupujte po brendu
+        short_description: Kratak opis
+        sign_in: Prijavi se
+        sign_in_here: Prijavi se ovde
+        sign_out: Odjavi se
+        simple_blocks: Jednostavni blokovi
+        simple_product: Jednostavan proizvod
+        slideshow_blocks: Slajd blokovi
+        slug: Putanja (slug)
+        sort: Sortiraj
+        sort_by_date: Sortiraj po datumu
+        source_code: Izvorni kod
+        source_currency: Izvorna valuta
+        start_date: Datum početka
+        starts_with: Počinje sa
+        status: Status
+        string_blocks: Tekstualni blokovi
+        subject: Naslov
+        subscribed_to_newsletter: Prijavljen na newsletter
+        subtotal: Međuzbir
+        summary: Rezime
+        summary_of_your_order: Rezime vaše porudžbine
+        support: Podrška
+        sync: Sinhronizuj
+        target_currency: Ciljna valuta
+        tax: Porez
+        tax_categories: Kategorije poreza
+        tax_rate: Poreska stopa
+        taxes_total: Ukupno poreza
+        taxonomy: Kategorija
+        taxons: Kategorije
+        taxons_for_which_the_lowest_price_is_not_displayed: Kategorije za koje nije prikazana najniža cena
+        terms_and_conditions: Uslovi korišćenja
+        text: Tekst
+        textarea: Tekstualno polje
+        thank_you: Hvala!
+        thank_you_for_registration: Hvala na registraciji
+        thank_you_for_your_order: Hvala na vašoj porudžbini
+        the_instructions_below_will_be_displayed_to_the_customer: Uputstva ispod će biti prikazana kupcu
+        the_page_you_are_looking_for_does_not_exist: Stranica koju tražite ne postoji.
+        the_page_you_are_looking_for_is_forbidden: Stranica koju tražite je zabranjena.
+        theme: Tema
+        there_are_no_attributes_configured: Nema podešenih atributa
+        there_are_no_blocks_to_display: Nema blokova za prikaz
+        there_are_no_channels_configured: Nema podešenih kanala
+        there_are_no_countries_configured: Nema podešenih zemalja
+        there_are_no_coupon_to_display: Nema kupona za prikaz
+        there_are_no_currencies_to_display: Nema valuta za prikaz
+        there_are_no_customers_to_display: Nema kupaca za prikaz
+        there_are_no_emails_configured: Nema podešenih emailova
+        there_are_no_inventory_items_to_display: Nema stavki zaliha za prikaz
+        there_are_no_inventory_units_to_display: Nema jedinica zaliha za prikaz
+        there_are_no_locales_configured: Nema podešenih lokalizacija
+        there_are_no_logged_events_to_display: Nema zabeleženih događaja za prikaz
+        there_are_no_menu_nodes_to_display: Nema stavki menija za prikaz
+        there_are_no_menus_to_display: Nema menija za prikaz
+        there_are_no_options_configured: Nema podešenih opcija
+        there_are_no_orders_for_this_customer_to_display: Nema porudžbina za ovog kupca za prikaz
+        there_are_no_pages_to_display: Nema stranica za prikaz
+        there_are_no_payment_methods_configured: Nema podešenih metoda plaćanja
+        there_are_no_payments_configured: Nema podešenih uplata
+        there_are_no_permissions_defined: Nema definisanih dozvola
+        there_are_no_products_to_display: Nema proizvoda za prikaz
+        there_are_no_promotions_configured: Nema podešenih promocija
+        there_are_no_reports_created: Nema kreiranih izveštaja
+        there_are_no_reviews: Nema recenzija
+        there_are_no_roles_defined: Nema definisanih uloga
+        there_are_no_shipments_to_display: Nema pošiljki za prikaz
+        there_are_no_shipping_categories_configured: Nema podešenih kategorija isporuke
+        there_are_no_shipping_methods_configured: Nema podešenih metoda isporuke
+        there_are_no_tax_categories_configured: Nema podešenih kategorija poreza
+        there_are_no_tax_rates_configured: Nema podešenih poreskih stopa
+        there_are_no_taxons_to_display: Nema kategorija za prikaz
+        there_are_no_users_to_display: Nema korisnika za prikaz
+        there_are_no_variants_to_display: Nema varijanti za prikaz
+        there_are_no_zones_configured: Nema podešenih zona
+        there_is_a_new_version_of_sylius_available: Dostupna je nova verzija Sylius-a
+        there_is_no_main_taxon_for_this_product: Ovaj proizvod nema glavnu kategoriju
+        this_customer_does_not_have_a_default_address: Ovaj kupac nema podrazumevanu adresu
+        this_customer_has_not_completed_any_orders_yet: Ovaj kupac još nije završio nijednu porudžbinu
+        this_message_contains_errors: Ova forma sadrži greške.
+        this_product_has_no_attributes_defined: Ovaj proizvod nema definisane atribute
+        to: Do
+        toggle_all: Označi/poništi sve
+        toggle_sidebar: Prikaži/sakrij bočnu traku
+        topic: Tema
+        total_in_base_currency: Ukupno u osnovnoj valuti
+        total_qty: Ukupna količina
+        total_records: Ukupan broj zapisa
+        total_value_of_orders: Ukupna vrednost porudžbina
+        tracked: Praćeno
+        tracking_code: Kod za praćenje
+        translatable: Može se prevesti
+        translations: Prevodi
+        unavailable: Nije dostupno
+        uncheck_all: Poništi sve
+        unexpected_error_occurred: Došlo je do neočekivane greške.
+        unit_discount: Popust po jedinici
+        unknown: Nepoznato
+        unlimited: Neograničeno
+        unlock: Otključaj
+        update: Ažuriraj
+        update_cart: Ažuriraj korpu
+        update_product_association_type: Ažuriraj tip povezanosti proizvoda
+        updated: Ažurirano
+        updated_at: Ažurirano u
+        updating_date: Datum ažuriranja
+        usage: Korišćenje
+        use_the_contact_form_below_to_send_us_a_message: Koristite kontakt formu ispod da nam pošaljete poruku.
+        world: Svet
+        value: Vrednost
+        values: Vrednosti
+        variant: Varijanta
+        variant_choice: Izbor varijante
+        variants: Varijante
+        verified: Potvrđeno
+        verify: Potvrdi
+        verify_email_address: Proverite svoj email i potvrdite adresu
+        view: Pregled
+        view_and_edit_cart: Pregledaj i izmeni korpu
+        view_order: Pregled porudžbine
+        view_product_details: Pogledajte detalje proizvoda %product%
+        view_your_order_or_change_payment_method: Pogledajte porudžbinu ili promenite način plaćanja
+        view_your_store: Pregledajte vašu prodavnicu
+        void: Poništeno
+        volume_based_pricing: Cena u zavisnosti od količine
+        votes: Glasovi
+        weight: Težina
+        welcome: Dobrodošli
+        welcome_to_our_store: Dobrodošli u našu prodavnicu
+        width: Širina
+        write_your_own_review: Napišite svoju recenziju
+        yes_label: "Da"
+        you_are_reviewing: Ocenjujete
+        you_can_no_longer_change_payment_method_of_this_order: Više ne možete promeniti metod plaćanja za ovu porudžbinu
+        you_have_no_addresses_defined: Nemate definisane adrese
+        you_may_also_like: Možda će vam se svideti i
+        your_default_address: Vaša podrazumevana adresa
+        your_last_5_orders: Vaših poslednjih 5 porudžbina
+        your_order_has_been_shipped: Vaša porudžbina je poslata
+        your_profile: Vaš profil
+        your_shopping_cart: Vaša korpa
+        your_store: Vaša prodavnica
+        youtube: YouTube
+        zone_consisting_of_countries: Zona koja se sastoji od zemalja
+        zone_consisting_of_other_zones: Zona koja se sastoji od drugih zona
+        zone_consisting_of_provinces: Zona koja se sastoji od provincija
+mvsoft:
+    product:
+        additionalNote: Napomena
