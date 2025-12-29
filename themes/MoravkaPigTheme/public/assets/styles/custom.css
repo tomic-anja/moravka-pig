@@ -1,26 +1,222 @@
+/* --------------------------------------------------------------------
+   GOOGLE FONT — Cinzel
+   -------------------------------------------------------------------- */
 :root {
-    --primary-color: #0A8D1A;
-    --bs-primary: #0A8D1A;
-    --bs-primary-rgb: #0A8D1A;
+    --bs-font-sans-serif: "Cinzel", system-ui, -apple-system, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+        sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
 }
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------
+   Unix Print — Primary color - Bootstrap override
+   -------------------------------------------------------------------- */
+:root {
+    --default-dark-color: #282929;
+    --bs-primary: #0A8D1A;
+    --bs-primary-rgb: 10, 141, 26;
+    --bs-link-color: var(--bs-primary);
+    --bs-link-color-rgb: var(--bs-primary-rgb);
+    --bs-link-hover-color: color-mix(in srgb, var(--bs-primary) 85%, #000);
+    --bs-link-hover-color-rgb: 8, 115, 22;
+    --bs-focus-ring-color: rgba(var(--bs-primary-rgb), 0.25);
+    --bs-primary-text-emphasis: color-mix(in srgb, var(--bs-primary) 55%, #000);
+    --bs-primary-bg-subtle: color-mix(in srgb, var(--bs-primary) 15%, #fff);
+    --bs-primary-border-subtle: color-mix(in srgb, var(--bs-primary) 35%, #fff);
+}
+
+/* --------------------------------------------------------------------
+   Links - Bootstrap override
+   -------------------------------------------------------------------- */
+
+a {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+    text-decoration: underline;
+}
+a:hover {
+    --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+}
+
+a.link-primary {
+    color: var(--bs-primary);
+}
+a.link-reset:hover,
+.list-nav li a:hover {
+    color: var(--bs-primary);
+}
+
+/* --------------------------------------------------------------------
+   Navbar - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.navbar {
+    --bs-navbar-hover-color: var(--bs-primary);
+    --bs-navbar-active-color: var(--bs-primary);
+    --bs-navbar-brand-color: var(--bs-primary);
+    --bs-navbar-brand-hover-color: var(--bs-primary);
+}
+
+/* --------------------------------------------------------------------
+   Buttons - Bootstrap override
+   -------------------------------------------------------------------- */
 
 .btn-primary {
-    --bs-btn-color: #000;
-    --bs-btn-bg: #0A8D1A;
-    --bs-btn-border-color: #0A8D1A;
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #0A8D1A;
-    --bs-btn-hover-border-color: #0A8D1A;
-    --bs-btn-focus-shadow-rgb: 29, 157, 131;
-    --bs-btn-active-color: #000;
-    --bs-btn-active-bg: #0A8D1A;
-    --bs-btn-active-border-color: #0A8D1A;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #000;
-    --bs-btn-disabled-bg: #0A8D1A;
-    --bs-btn-disabled-border-color: #0A8D1A;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary) 90%, #fff);
+    --bs-btn-hover-border-color: color-mix(
+        in srgb,
+        var(--bs-primary) 85%,
+        #fff
+    );
+    --bs-btn-active-bg: color-mix(in srgb, var(--bs-primary) 80%, #fff);
+    --bs-btn-active-border-color: color-mix(
+        in srgb,
+        var(--bs-primary) 75%,
+        #fff
+    );
+
+    --bs-btn-disabled-bg: var(--bs-primary);
+    --bs-btn-disabled-border-color: var(--bs-primary);
 }
 
-body {
-    font-family: "Cinzel", sans-serif !important;
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+}
+
+/* --------------------------------------------------------------------
+   Navs / Tabs / Pills - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.nav-pills {
+    --bs-nav-pills-link-active-bg: var(--bs-primary);
+}
+.nav-tabs {
+    --bs-nav-tabs-link-active-border-color: var(--bs-primary);
+}
+
+/* --------------------------------------------------------------------
+   Pagination - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.pagination {
+    --bs-pagination-active-bg: var(--bs-primary);
+    --bs-pagination-active-border-color: var(--bs-primary);
+    --bs-pagination-focus-color: var(--bs-primary);
+}
+
+/* --------------------------------------------------------------------
+   Dropdowns - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: var(--bs-primary);
+    --bs-dropdown-link-active-color: #fff;
+}
+
+/* --------------------------------------------------------------------
+   List group - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.list-group {
+    --bs-list-group-active-bg: var(--bs-primary);
+    --bs-list-group-active-border-color: var(--bs-primary);
+}
+
+/* --------------------------------------------------------------------
+   Forms & focus rings - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.form-check-input {
+    --bs-form-check-input-checked-bg-color: var(--bs-primary);
+    --bs-form-check-input-checked-border-color: var(--bs-primary);
+}
+.form-range {
+    --bs-form-range-thumb-bg: var(--bs-primary);
+}
+.form-control {
+    --bs-focus-ring-color: rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* --------------------------------------------------------------------
+   Progress / Accordion - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.progress {
+    --bs-progress-bar-bg: var(--bs-primary);
+}
+
+.accordion {
+    --bs-accordion-btn-active-color: var(--bs-primary);
+    --bs-accordion-btn-active-bg: color-mix(
+        in srgb,
+        var(--bs-primary) 12%,
+        transparent
+    );
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem
+        rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* --------------------------------------------------------------------
+   Close button - Bootstrap override
+   -------------------------------------------------------------------- */
+
+.btn-close {
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* --------------------------------------------------------------------
+   HEADER
+-------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+    .navbar .dropdown-menu {
+        position: static;
+        border: none;
+    }
+}
+
+/* --------------------------------------------------------------------
+   HOMEPAGE BANNER / CAROUSEL
+-------------------------------------------------------------------- */
+.homepage-banner .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    background-color: var(--default-dark-color);
+}
+
+/* --------------------------------------------------------------------
+   NAVIGATION MENU
+-------------------------------------------------------------------- */
+.navigation-menu {
+    /* background-color: var(--default-dark-color); */
+}
+
+.navigation-menu li a,
+.navigation-menu .btn-search {
+    /* color: #fff; */
+}
+
+.navigation-menu .btn-search:hover {
+    color: var(--bs-primary);
+}
+
+.navigation-menu .navbar-search {
+    box-shadow: inset 0 1px 0 0 var(--default-dark-color),
+        inset 0 -1px 0 0 var(--default-dark-color);
+}
+
+@media (max-width: 992px) {
+    .navigation-menu .navbar-search {
+        margin-bottom: 20px;
+    }
 }
