@@ -15,7 +15,11 @@
 
         {% block stylesheets %}
             {% hook '#stylesheets' with { _prefixes: prefixes } %}
-            <link rel="stylesheet" href="{{ asset('_themes/anja-tomic/moravka-pig/assets/styles/custom.css') }}">
+            <link rel="stylesheet" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/styles/custom.css') }}">
+            <link rel="icon" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/images/favicon.png') }}" type="image/png" sizes="32x32">
+            <link rel="shortcut icon" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/images/favicon.png') }}" type="image/x-icon">
+            <link rel="apple-touch-icon" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/images/favicon.png') }}">
+            <link rel="manifest" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/favicon.png') }}">
         {% endblock %}
 
         {% hook 'head' with { _prefixes: prefixes } %}
