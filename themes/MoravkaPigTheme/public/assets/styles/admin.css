@@ -1,0 +1,139 @@
+/* --------------------------------------------------------------------
+   GOOGLE FONT — Cinzel
+   -------------------------------------------------------------------- */
+   body.sylius-admin {
+    font-family: "Cinzel", system-ui, -apple-system, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------
+   Unix Print — Primary color - Admin override
+   -------------------------------------------------------------------- */
+:root {
+    --tblr-primary: #0A8D1A;
+    --tblr-primary-darken: #08741A;
+    --tblr-primary-fg: #fff;
+    --tblr-link-color: var(--tblr-primary);
+    --tblr-link-hover-color: #08741A;
+    --tblr-shadow-input: 0 0 0 0.25rem rgba(10, 141, 26, 0.25);
+}
+
+/* --------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------- */
+.sylius-admin .btn-primary {
+    --tblr-btn-border-color: transparent;
+    --tblr-btn-hover-border-color: transparent;
+    --tblr-btn-active-border-color: transparent;
+    --tblr-btn-color: var(--tblr-primary-fg);
+    --tblr-btn-bg: var(--tblr-primary);
+    --tblr-btn-hover-color: var(--tblr-primary-fg);
+    --tblr-btn-hover-bg: var(--tblr-primary-darken);
+    --tblr-btn-active-color: var(--tblr-primary-fg);
+    --tblr-btn-active-bg: var(--tblr-primary-darken);
+    --tblr-btn-disabled-bg: var(--tblr-primary);
+    --tblr-btn-disabled-color: var(--tblr-primary-fg);
+    --tblr-btn-box-shadow: var(--tblr-shadow-input);
+}
+
+/* --------------------------------------------------------------------
+   Links
+   -------------------------------------------------------------------- */
+.sylius-admin a {
+    color: var(--tblr-link-color);
+    text-decoration: underline;
+}
+.sylius-admin a:hover {
+    color: var(--tblr-link-hover-color);
+}
+
+/* --------------------------------------------------------------------
+   Navbar / Sidebar
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.menu,
+.sylius-admin .ui.sidebar {
+    background-color: #282929; /* isto kao shop default-dark-color */
+}
+
+.sylius-admin .ui.menu a.item:hover {
+    color: var(--tblr-primary);
+}
+
+/* --------------------------------------------------------------------
+   Forms & Inputs
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.input input:focus,
+.sylius-admin .ui.dropdown:focus,
+.sylius-admin .ui.checkbox input:checked ~ label::before {
+    box-shadow: 0 0 0 0.25rem rgba(10, 141, 26, 0.25);
+}
+
+/* --------------------------------------------------------------------
+   Tabs / Pills
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.menu .item.active {
+    background-color: var(--tblr-primary);
+    color: var(--tblr-primary-fg);
+}
+
+/* --------------------------------------------------------------------
+   Pagination
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.pagination.menu .active.item {
+    background-color: var(--tblr-primary);
+    color: var(--tblr-primary-fg);
+}
+
+/* --------------------------------------------------------------------
+   Progress Bars
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.progress .bar {
+    background-color: var(--tblr-primary);
+}
+
+/* --------------------------------------------------------------------
+   Accordion
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.accordion .title.active {
+    color: var(--tblr-primary);
+}
+.sylius-admin .ui.accordion .content {
+    /* border-color: var(--tblr-primary); */
+}
+
+/* --------------------------------------------------------------------
+   Dropdowns
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.dropdown .menu .item.active {
+    background-color: var(--tblr-primary);
+    color: var(--tblr-primary-fg);
+}
+
+/* --------------------------------------------------------------------
+   List / Tables
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.list .item.active,
+.sylius-admin table.ui.table tr.active {
+    background-color: var(--tblr-primary);
+    color: var(--tblr-primary-fg);
+}
+
+/* --------------------------------------------------------------------
+   Close button
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.icon.button .icon,
+.sylius-admin .ui.close.icon {
+    color: var(--tblr-primary);
+}
+
+/* --------------------------------------------------------------------
+   Other UI elements
+   -------------------------------------------------------------------- */
+.sylius-admin .ui.segment,
+.sylius-admin .ui.card,
+.sylius-admin .ui.label {
+    /* border-color: var(--tblr-primary); */
+}
