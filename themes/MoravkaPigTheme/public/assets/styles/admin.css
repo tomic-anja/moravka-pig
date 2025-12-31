@@ -137,3 +137,15 @@
 .sylius-admin .ui.label {
     /* border-color: var(--tblr-primary); */
 }
+
+/* --------------------------------------------------------------------
+   Sidebar dropdown active item
+   -------------------------------------------------------------------- */
+.navbar-vertical 
+.navbar-collapse 
+.sidebar.navbar-nav 
+.nav-item 
+.dropdown-menu-column 
+.dropdown-item.active {
+    color: var(--tblr-primary);
+}

@@ -9,11 +9,15 @@
             {% hook generic_hook ~ '#metatags' %}
         {% endblock %}
 
-        <title>{% block title %}Sylius{% endblock %}</title>
+        <title>{% block title %}Moravka Pig{% endblock %}</title>
 
         {% block stylesheets %}
             {% hook generic_hook ~ '#stylesheets' %}
             <link rel="stylesheet" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/styles/admin.css') }}">
+            <link rel="icon" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/images/favicon.png') }}" type="image/png" sizes="32x32">
+            <link rel="shortcut icon" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/images/favicon.png') }}" type="image/x-icon">
+            <link rel="apple-touch-icon" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/images/favicon.png') }}">
+            <link rel="manifest" href="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/favicon.png') }}">
         {% endblock %}
     </head>
     <body class="{% block body_class %}{% endblock %}">
