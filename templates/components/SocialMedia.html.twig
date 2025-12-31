@@ -1,0 +1,16 @@
+<div class="col-md-4 mb-4 mb-lg-0 text-center text-md-center">
+    <div class="d-inline-flex align-items-center gap-2">
+        {% for social in socialMedia %}
+            <a href="{{ social.link starts with 'http' ? social.link : 'https://' ~ social.link }}" target="_blank" class="btn btn-primary rounded-circle p-2 d-inline-flex align-items-center justify-content-center" aria-label="{{ social.title }}">
+                {% set iconMap = {
+                    'facebook': 'tabler:brand-facebook',
+                    'x': 'tabler:brand-x',
+                    'twitter': 'tabler:brand-x', 
+                    'linkedin': 'tabler:brand-linkedin',
+                    'instagram': 'tabler:brand-instagram'
+                } %}
+                {{ ux_icon(iconMap[social.code]|default('tabler:brand-social'), { class: 'icon' }) }}
+            </a>
+        {% endfor %}
+    </div>
+</div>
