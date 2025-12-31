@@ -185,6 +185,13 @@ a.link-reset:hover,
     }
 }
 
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+
 /* --------------------------------------------------------------------
    HOMEPAGE BANNER / CAROUSEL
 -------------------------------------------------------------------- */
