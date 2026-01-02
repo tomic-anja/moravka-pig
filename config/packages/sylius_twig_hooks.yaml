@@ -8,3 +8,9 @@ sylius_twig_hooks:
             latest_deals:
                 component: 'Blank'
                 priority: 0
+            latest_products:
+                component: 'Blank'
+                priority: 0
+            popular_products:
+                component: 'PopularProducts'
+                priority: 99 

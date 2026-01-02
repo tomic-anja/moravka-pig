@@ -16,8 +16,23 @@ class Product extends BaseProduct implements ProductInterface
 {
     use ProductTrait;
 
+    #[ORM\Column(options: ['default' => 0])]
+    private ?bool $isPopular = false;
+
     protected function createTranslation(): ProductTranslationInterface
     {
         return new ProductTranslation();
+    }
+
+    public function isPopular(): ?bool
+    {
+        return $this->isPopular;
+    }
+
+    public function setIsPopular(bool $isPopular): static
+    {
+        $this->isPopular = $isPopular;
+
+        return $this;
     }
 }
