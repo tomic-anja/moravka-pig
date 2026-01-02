@@ -1,0 +1,65 @@
+{% extends '@SyliusShop/shared/layout/base.html.twig' %}
+
+{% block content %}
+    <section class="py-6 py-lg-6">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-9">
+                    <h2 class="fw-bold lh-1 text-uppercase mb-3">
+                        GDE NAS MOŽETE NAĆI
+                    </h2>
+                    <br>
+                </div>
+            </div>
+            <section class="where-hero">
+                <div class="where-hero-overlay"></div>
+                <div class="where-hero-content">
+                    <h1>Gde kupiti <span>Moravku</span></h1>
+                    <p>Proverena prodajna mesta širom Srbije</p>
+                </div>
+                <div id="map"></div>
+            </section>
+
+            <section class="where-locations">
+                <div class="container">
+                    <div class="locations-grid">
+
+                        <div class="location-card" data-city="zlatibor" data-lat="43.7154036" data-lng="19.6991210">
+                            <h4>Kraljeva voda</h4>
+                            <p>📍 Zlatibor<br>Pržuljev Suvat</p>
+                            <span>⏰ Pon-Sub 08-21h</span><br><br><br>
+                            <button class="focus-map">Prikaži na mapi</button>
+                        </div>
+
+                        <div class="location-card" data-city="beograd" data-lat="44.8337880" data-lng="20.4122570">
+                            <h4>Zlatiborska carstva</h4>
+                            <p>📍 Novi Beograd<br>Palmira Toljatija 66A</p>
+                            <span>⏰ Pon-Pet 08-20h</span><br>
+                            <span>⏰ Sub 08-15h</span><br>
+                            <span>⏰ Ned 09-14h</span><br>
+                            <button class="focus-map">Prikaži na mapi</button>
+                        </div>
+
+                        <div class="location-card" data-city="beograd" data-lat="44.7417351" data-lng="20.4191329">
+                            <h4>Mesara Famoso</h4>
+                            <p>📍 Vidikovac<br>Pijaca Vidikovac lokal br 6.</p>
+                            <span>⏰ Uto-Ned 06:30-14:30h</span><br><br><br>
+                            <button class="focus-map">Prikaži na mapi</button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center mt-5">
+                <h4 class="mb-3">Nemate prodajno mesto u Vašoj blizini?</h4>
+                <a href="/sr/contact" class="btn btn-primary rounded-pill px-4 py-2 mt-2">Kontaktirajte nas</a>
+            </div>
+            <br>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ asset('_themes/anja-tomic/moravka-pig-theme/assets/js/entry.js') }}"></script>
+{% endblock %}
