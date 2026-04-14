@@ -204,13 +204,10 @@ a.link-reset:hover,
 /* --------------------------------------------------------------------
    NAVIGATION MENU
 -------------------------------------------------------------------- */
-.navigation-menu {
-    /* background-color: var(--default-dark-color); */
-}
 
-.navigation-menu li a,
-.navigation-menu .btn-search {
-    /* color: #fff; */
+.navigation-menu .nav-link.active,
+.navigation-menu .nav-link[aria-current="page"] {
+    color: var(--bs-navbar-hover-color);
 }
 
 .navigation-menu .btn-search:hover {
@@ -312,6 +309,18 @@ a.link-reset:hover,
 }
 
 /* ------------------------------------------------------------------------
+    PRODUCT PAGE - STICKY SIDEBAR
+----------------------------------------------------------------------- */
+.sticky-top {
+    z-index: 10 !important;
+}
+
+/* Ensure product summary sidebar doesn't overlap header */
+[data-sylius-test-html-attribute="product-box"] {
+    z-index: 10 !important;
+}
+
+/* ------------------------------------------------------------------------
     SALES POINTS
 ----------------------------------------------------------------------- */
 .where-hero {
@@ -378,4 +387,10 @@ a.link-reset:hover,
     color: var(--bs-primary);
     font-weight: 600;
     cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+    .footer .footer-nav {
+        text-align: center;
+    }
 }

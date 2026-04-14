@@ -1,14 +1,23 @@
 
 <div class="navigation-menu w-100">
+  {% set currentRoute = app.request.attributes.get('_route') %}
+  {% set currentPath = app.request.pathInfo %}
+
+  {% set isHome = currentRoute == 'sylius_shop_homepage' or currentPath in ['/', '/sr', '/sr/'] %}
+  {% set isProducts = currentPath starts with '/sr/taxons' or currentPath starts with '/taxons' %}
+  {% set isAboutUs = currentRoute == 'app_about_us' %}
+  {% set isSalesPoints = currentRoute == 'app_sales_points' %}
+  {% set isContact = currentRoute == 'sylius_shop_contact_request' %}
+
   <nav class="navbar navbar-expand p-0" role="navigation" aria-label="Main navigation">
     <div class="container d-flex align-items-center">
 
       <ul class="nav mx-auto d-none d-lg-flex" role="menubar" aria-label="Primary">
-        <li class="nav-item" role="none"><a class="nav-link" role="menuitem" href="/">Početna</a></li>
-        <li class="nav-item" role="none"><a class="nav-link" role="menuitem" href="/sr/taxons/proizvodi">Proizvodi</a></li>
-        <li class="nav-item" role="none"><a class="nav-link" role="menuitem" href="{{ path('app_about_us') }}">O nama</a></li>
-        <li class="nav-item" role="none"><a class="nav-link" role="menuitem" href="{{ path('app_sales_points') }}">Prodajna mesta</a></li>
-        <li class="nav-item" role="none"><a class="nav-link" role="menuitem" href="{{ path('sylius_shop_contact_request') }}">Kontakt</a></li>
+        <li class="nav-item" role="none"><a class="nav-link{% if isHome %} active{% endif %}" role="menuitem" {% if isHome %}aria-current="page"{% endif %} href="/">Početna</a></li>
+        <li class="nav-item" role="none"><a class="nav-link{% if isProducts %} active{% endif %}" role="menuitem" {% if isProducts %}aria-current="page"{% endif %} href="/sr/taxons/proizvodi">Proizvodi</a></li>
+        <li class="nav-item" role="none"><a class="nav-link{% if isAboutUs %} active{% endif %}" role="menuitem" {% if isAboutUs %}aria-current="page"{% endif %} href="{{ path('app_about_us') }}">O nama</a></li>
+        <li class="nav-item" role="none"><a class="nav-link{% if isSalesPoints %} active{% endif %}" role="menuitem" {% if isSalesPoints %}aria-current="page"{% endif %} href="{{ path('app_sales_points') }}">Prodajna mesta</a></li>
+        <li class="nav-item" role="none"><a class="nav-link{% if isContact %} active{% endif %}" role="menuitem" {% if isContact %}aria-current="page"{% endif %} href="{{ path('sylius_shop_contact_request') }}">Kontakt</a></li>
       </ul>
 
     </div>
